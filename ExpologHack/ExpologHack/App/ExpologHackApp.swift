@@ -11,8 +11,8 @@ import SwiftUI
 struct ExpologHackApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationViewControllerRepresentable()
-            .edgesIgnoringSafeArea(.all)
+            RoutePlannerView()
+//            .edgesIgnoringSafeArea(.all)
         }
     }
 }

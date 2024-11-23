@@ -1,5 +1,5 @@
 {
-  "originHash" : "f650782c01d18e75d8337f6815ac2a52294444239347885d73551e28b1baa4d1",
+  "originHash" : "da970afd002308c742482b6f0d3d09fea6be6251d1765b98a4680f439adfe768",
   "pins" : [
     {
       "identity" : "mapbox-common-ios",
@@ -44,6 +44,15 @@
       "state" : {
         "revision" : "730e5fef0c4a0564bfbf58fce54914e9ede9f776",
         "version" : "321.0.0"
+      }
+    },
+    {
+      "identity" : "openai",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MacPaw/OpenAI",
+      "state" : {
+        "revision" : "843e087929aa806adb611dbca93f9a4a7f28be04",
+        "version" : "0.3.0"
       }
     },
     {

@@ -19,6 +19,9 @@
 		975192D02CF21D2700384FF1 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 975192CF2CF21D2700384FF1 /* MapboxMaps */; };
 		975192D32CF21E0B00384FF1 /* MapboxNavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = 975192D22CF21E0B00384FF1 /* MapboxNavigationCore */; };
 		975192D52CF21E0B00384FF1 /* MapboxNavigationUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 975192D42CF21E0B00384FF1 /* MapboxNavigationUIKit */; };
+		975192D82CF2237700384FF1 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 975192D72CF2237700384FF1 /* OpenAI */; };
+		9751930C2CF22CD800384FF1 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9751930B2CF22CD800384FF1 /* ChatView.swift */; };
+		9751930E2CF22DA300384FF1 /* AddAddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9751930D2CF22DA300384FF1 /* AddAddressInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,8 @@
 		4AF8F51D2CF1F441000549B9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4AF8F5202CF1F453000549B9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		975192CD2CF21CE100384FF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9751930B2CF22CD800384FF1 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		9751930D2CF22DA300384FF1 /* AddAddressInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 			files = (
 				975192D52CF21E0B00384FF1 /* MapboxNavigationUIKit in Frameworks */,
 				975192D32CF21E0B00384FF1 /* MapboxNavigationCore in Frameworks */,
+				975192D82CF2237700384FF1 /* OpenAI in Frameworks */,
 				975192D02CF21D2700384FF1 /* MapboxMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				4AF8F4F22CF1F3B5000549B9 /* ContentView.swift */,
+				9751930B2CF22CD800384FF1 /* ChatView.swift */,
+				9751930D2CF22DA300384FF1 /* AddAddressInfo.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -272,6 +280,7 @@
 			packageReferences = (
 				975192CE2CF21D2700384FF1 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
 				975192D12CF21E0B00384FF1 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */,
+				975192D62CF2237700384FF1 /* XCRemoteSwiftPackageReference "OpenAI" */,
 			);
 			productRefGroup = 4AF8F4EE2CF1F3B5000549B9 /* Products */;
 			projectDirPath = "";
@@ -317,7 +326,9 @@
 			files = (
 				4AF8F4F32CF1F3B5000549B9 /* ContentView.swift in Sources */,
 				4AF8F4F12CF1F3B5000549B9 /* ExpologHackApp.swift in Sources */,
+				9751930C2CF22CD800384FF1 /* ChatView.swift in Sources */,
 				4AF8F51E2CF1F441000549B9 /* Utils.swift in Sources */,
+				9751930E2CF22DA300384FF1 /* AddAddressInfo.swift in Sources */,
 				4AF8F5212CF1F453000549B9 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,6 +689,14 @@
 				minimumVersion = 3.5.0;
 			};
 		};
+		975192D62CF2237700384FF1 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -695,6 +714,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 975192D12CF21E0B00384FF1 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
 			productName = MapboxNavigationUIKit;
+		};
+		975192D72CF2237700384FF1 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 975192D62CF2237700384FF1 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

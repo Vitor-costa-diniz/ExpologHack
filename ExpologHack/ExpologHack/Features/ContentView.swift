@@ -14,69 +14,92 @@ import MapboxMaps
 
 
 struct NavigationViewControllerRepresentable: UIViewControllerRepresentable {
+    var departure: String
+    var addresses: [String]
+    
+    @State private var isLoading: Bool = true
+    @State private var waypoints: [Waypoint] = []
+    
     typealias UIViewControllerType = UIViewController
     
     func makeUIViewController(context: Context) -> UIViewController {
-        let viewController = UIViewController() // Placeholder UIViewController for now
+        let viewController = UIViewController()
         
-        calculateRoutes { navigationViewController in
+        Task {
+            await geocodeAddresses()
             DispatchQueue.main.async {
-                // display the NavigationViewController
-                viewController.present(navigationViewController, animated: true, completion: nil)
+                isLoading = false
+                calculateRoutes { navigationViewController in
+                    DispatchQueue.main.async {
+                        viewController.present(navigationViewController, animated: true, completion: nil)
+                    }
+                }
             }
         }
+        
+        // Mostrar uma tela de carregamento enquanto os dados não estiverem prontos
+        if isLoading {
+            let loadingView = UIActivityIndicatorView(style: .large)
+            loadingView.startAnimating()
+            viewController.view.addSubview(loadingView)
+            loadingView.center = viewController.view.center
+        }
+        
         return viewController
     }
     
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        // No updates needed at this point
+        // Nenhuma atualização necessária no momento
     }
     
     @MainActor private func calculateRoutes(completion: @escaping (NavigationViewController) -> Void) {
-        
-        // create a new navigation provider using simulated device location
         let mapboxNavigationProvider = MapboxNavigationProvider(
-            coreConfig: .init(
-                locationSource: .simulation() // replace with .live to use the device's location
-            )
+            coreConfig: .init(locationSource: .simulation(initialLocation: CLLocation(latitude: waypoints.first!.coordinate.latitude, longitude: waypoints.first!.coordinate.longitude)))
         )
         
         let mapboxNavigation = mapboxNavigationProvider.mapboxNavigation
-        
-        // set up navigation by specifying origin and destination coordinates
-        let origin = CLLocationCoordinate2DMake(37.77440680146262, -122.43539772352648)
-        let destination = CLLocationCoordinate2DMake(37.76556957793795, -122.42409811526268)
-        let options = NavigationRouteOptions(coordinates: [origin, destination])
+        let coordinates = waypoints.map { $0.coordinate }
+        let options = NavigationRouteOptions(coordinates: coordinates)
 
-        // create the navigation request
         let request = mapboxNavigation.routingProvider().calculateRoutes(options: options)
         
         Task {
             switch await request.result {
             case .failure(let error):
-                print(error.localizedDescription)
+                print("Erro ao calcular a rota: \(error.localizedDescription)")
             case .success(let navigationRoutes):
-                
-                // set up options for NavigationViewController
                 let navigationOptions = NavigationOptions(
                     mapboxNavigation: mapboxNavigation,
                     voiceController: mapboxNavigationProvider.routeVoiceController,
                     eventsManager: mapboxNavigationProvider.eventsManager()
                 )
                 
-                // create the NavigationViewController, combining the returned routes and the options defined above
                 let navigationViewController = NavigationViewController(
                     navigationRoutes: navigationRoutes,
                     navigationOptions: navigationOptions
                 )
                 
-                // set additional options on the NavigationViewController
                 navigationViewController.modalPresentationStyle = .fullScreen
-                // Render part of the route that has been traversed with full transparency, to give the illusion of a disappearing route.
                 navigationViewController.routeLineTracksTraversal = true
                 
-                // Return the navigation view controller in the completion handler
                 completion(navigationViewController)
+            }
+        }
+    }
+    
+    private func geocodeAddresses() async {
+        let geocoder = CLGeocoder()
+        
+        let allAddresses = [departure] + addresses.filter { !$0.isEmpty }
+        
+        for address in allAddresses {
+            do {
+                let placemarks = try await geocoder.geocodeAddressString(address)
+                if let location = placemarks.first?.location {
+                    waypoints.append(Waypoint(coordinate: location.coordinate, name: address))
+                }
+            } catch {
+                print("Erro ao geocodificar endereço \(address): \(error.localizedDescription)")
             }
         }
     }
