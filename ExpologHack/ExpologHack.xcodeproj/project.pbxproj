@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4AF8F4F12CF1F3B5000549B9 /* ExpologHackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F02CF1F3B5000549B9 /* ExpologHackApp.swift */; };
+		4AF8F4F32CF1F3B5000549B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F22CF1F3B5000549B9 /* ContentView.swift */; };
+		4AF8F4F52CF1F3B6000549B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F42CF1F3B6000549B9 /* Assets.xcassets */; };
+		4AF8F4F82CF1F3B6000549B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F72CF1F3B6000549B9 /* Preview Assets.xcassets */; };
+		4AF8F5022CF1F3B7000549B9 /* ExpologHackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F5012CF1F3B7000549B9 /* ExpologHackTests.swift */; };
+		4AF8F50C2CF1F3B7000549B9 /* ExpologHackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F50B2CF1F3B7000549B9 /* ExpologHackUITests.swift */; };
+		4AF8F50E2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F50D2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift */; };
+		4AF8F51E2CF1F441000549B9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F51D2CF1F441000549B9 /* Utils.swift */; };
+		4AF8F5212CF1F453000549B9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F5202CF1F453000549B9 /* Models.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4AF8F4FE2CF1F3B7000549B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4AF8F4E52CF1F3B5000549B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AF8F4EC2CF1F3B5000549B9;
+			remoteInfo = ExpologHack;
+		};
+		4AF8F5082CF1F3B7000549B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4AF8F4E52CF1F3B5000549B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AF8F4EC2CF1F3B5000549B9;
+			remoteInfo = ExpologHack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4AF8F4ED2CF1F3B5000549B9 /* ExpologHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpologHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AF8F4F02CF1F3B5000549B9 /* ExpologHackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpologHackApp.swift; sourceTree = "<group>"; };
+		4AF8F4F22CF1F3B5000549B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4AF8F4F42CF1F3B6000549B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4AF8F4F72CF1F3B6000549B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4AF8F4FD2CF1F3B7000549B9 /* ExpologHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpologHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AF8F5012CF1F3B7000549B9 /* ExpologHackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpologHackTests.swift; sourceTree = "<group>"; };
+		4AF8F5072CF1F3B7000549B9 /* ExpologHackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpologHackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AF8F50B2CF1F3B7000549B9 /* ExpologHackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpologHackUITests.swift; sourceTree = "<group>"; };
+		4AF8F50D2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpologHackUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4AF8F51D2CF1F441000549B9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		4AF8F5202CF1F453000549B9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4AF8F4EA2CF1F3B5000549B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AF8F4FA2CF1F3B7000549B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AF8F5042CF1F3B7000549B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4AF8F4E42CF1F3B5000549B9 = {
+			isa = PBXGroup;
+			children = (
+				4AF8F4EF2CF1F3B5000549B9 /* ExpologHack */,
+				4AF8F5002CF1F3B7000549B9 /* ExpologHackTests */,
+				4AF8F50A2CF1F3B7000549B9 /* ExpologHackUITests */,
+				4AF8F4EE2CF1F3B5000549B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4AF8F4EE2CF1F3B5000549B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4AF8F4ED2CF1F3B5000549B9 /* ExpologHack.app */,
+				4AF8F4FD2CF1F3B7000549B9 /* ExpologHackTests.xctest */,
+				4AF8F5072CF1F3B7000549B9 /* ExpologHackUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4AF8F4EF2CF1F3B5000549B9 /* ExpologHack */ = {
+			isa = PBXGroup;
+			children = (
+				4AF8F51A2CF1F400000549B9 /* App */,
+				4AF8F51B2CF1F40F000549B9 /* Resources */,
+				4AF8F51C2CF1F436000549B9 /* Utils */,
+				4AF8F51F2CF1F448000549B9 /* Models */,
+				4AF8F5222CF1F458000549B9 /* Features */,
+				4AF8F4F62CF1F3B6000549B9 /* Preview Content */,
+			);
+			path = ExpologHack;
+			sourceTree = "<group>";
+		};
+		4AF8F4F62CF1F3B6000549B9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4AF8F4F72CF1F3B6000549B9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4AF8F5002CF1F3B7000549B9 /* ExpologHackTests */ = {
+			isa = PBXGroup;
+			children = (
+				4AF8F5012CF1F3B7000549B9 /* ExpologHackTests.swift */,
+			);
+			path = ExpologHackTests;
+			sourceTree = "<group>";
+		};
+		4AF8F50A2CF1F3B7000549B9 /* ExpologHackUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4AF8F50B2CF1F3B7000549B9 /* ExpologHackUITests.swift */,
+				4AF8F50D2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift */,
+			);
+			path = ExpologHackUITests;
+			sourceTree = "<group>";
+		};
+		4AF8F51A2CF1F400000549B9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4AF8F4F02CF1F3B5000549B9 /* ExpologHackApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4AF8F51B2CF1F40F000549B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4AF8F4F42CF1F3B6000549B9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4AF8F51C2CF1F436000549B9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4AF8F51D2CF1F441000549B9 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4AF8F51F2CF1F448000549B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4AF8F5202CF1F453000549B9 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4AF8F5222CF1F458000549B9 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4AF8F4F22CF1F3B5000549B9 /* ContentView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4AF8F4EC2CF1F3B5000549B9 /* ExpologHack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AF8F5112CF1F3B7000549B9 /* Build configuration list for PBXNativeTarget "ExpologHack" */;
+			buildPhases = (
+				4AF8F4E92CF1F3B5000549B9 /* Sources */,
+				4AF8F4EA2CF1F3B5000549B9 /* Frameworks */,
+				4AF8F4EB2CF1F3B5000549B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExpologHack;
+			productName = ExpologHack;
+			productReference = 4AF8F4ED2CF1F3B5000549B9 /* ExpologHack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4AF8F4FC2CF1F3B7000549B9 /* ExpologHackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AF8F5142CF1F3B7000549B9 /* Build configuration list for PBXNativeTarget "ExpologHackTests" */;
+			buildPhases = (
+				4AF8F4F92CF1F3B7000549B9 /* Sources */,
+				4AF8F4FA2CF1F3B7000549B9 /* Frameworks */,
+				4AF8F4FB2CF1F3B7000549B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4AF8F4FF2CF1F3B7000549B9 /* PBXTargetDependency */,
+			);
+			name = ExpologHackTests;
+			productName = ExpologHackTests;
+			productReference = 4AF8F4FD2CF1F3B7000549B9 /* ExpologHackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4AF8F5062CF1F3B7000549B9 /* ExpologHackUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AF8F5172CF1F3B7000549B9 /* Build configuration list for PBXNativeTarget "ExpologHackUITests" */;
+			buildPhases = (
+				4AF8F5032CF1F3B7000549B9 /* Sources */,
+				4AF8F5042CF1F3B7000549B9 /* Frameworks */,
+				4AF8F5052CF1F3B7000549B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4AF8F5092CF1F3B7000549B9 /* PBXTargetDependency */,
+			);
+			name = ExpologHackUITests;
+			productName = ExpologHackUITests;
+			productReference = 4AF8F5072CF1F3B7000549B9 /* ExpologHackUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4AF8F4E52CF1F3B5000549B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					4AF8F4EC2CF1F3B5000549B9 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					4AF8F4FC2CF1F3B7000549B9 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 4AF8F4EC2CF1F3B5000549B9;
+					};
+					4AF8F5062CF1F3B7000549B9 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 4AF8F4EC2CF1F3B5000549B9;
+					};
+				};
+			};
+			buildConfigurationList = 4AF8F4E82CF1F3B5000549B9 /* Build configuration list for PBXProject "ExpologHack" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4AF8F4E42CF1F3B5000549B9;
+			productRefGroup = 4AF8F4EE2CF1F3B5000549B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4AF8F4EC2CF1F3B5000549B9 /* ExpologHack */,
+				4AF8F4FC2CF1F3B7000549B9 /* ExpologHackTests */,
+				4AF8F5062CF1F3B7000549B9 /* ExpologHackUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4AF8F4EB2CF1F3B5000549B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AF8F4F82CF1F3B6000549B9 /* Preview Assets.xcassets in Resources */,
+				4AF8F4F52CF1F3B6000549B9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AF8F4FB2CF1F3B7000549B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AF8F5052CF1F3B7000549B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4AF8F4E92CF1F3B5000549B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AF8F4F32CF1F3B5000549B9 /* ContentView.swift in Sources */,
+				4AF8F4F12CF1F3B5000549B9 /* ExpologHackApp.swift in Sources */,
+				4AF8F51E2CF1F441000549B9 /* Utils.swift in Sources */,
+				4AF8F5212CF1F453000549B9 /* Models.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AF8F4F92CF1F3B7000549B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AF8F5022CF1F3B7000549B9 /* ExpologHackTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AF8F5032CF1F3B7000549B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AF8F50E2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift in Sources */,
+				4AF8F50C2CF1F3B7000549B9 /* ExpologHackUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4AF8F4FF2CF1F3B7000549B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AF8F4EC2CF1F3B5000549B9 /* ExpologHack */;
+			targetProxy = 4AF8F4FE2CF1F3B7000549B9 /* PBXContainerItemProxy */;
+		};
+		4AF8F5092CF1F3B7000549B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AF8F4EC2CF1F3B5000549B9 /* ExpologHack */;
+			targetProxy = 4AF8F5082CF1F3B7000549B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4AF8F50F2CF1F3B7000549B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4AF8F5102CF1F3B7000549B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4AF8F5122CF1F3B7000549B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ExpologHack/Preview Content\"";
+				DEVELOPMENT_TEAM = ZAKSG2QLGT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timeMaca.ExpologHack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4AF8F5132CF1F3B7000549B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ExpologHack/Preview Content\"";
+				DEVELOPMENT_TEAM = ZAKSG2QLGT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timeMaca.ExpologHack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4AF8F5152CF1F3B7000549B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZAKSG2QLGT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timeMaca.ExpologHackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExpologHack.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ExpologHack";
+			};
+			name = Debug;
+		};
+		4AF8F5162CF1F3B7000549B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZAKSG2QLGT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timeMaca.ExpologHackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExpologHack.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ExpologHack";
+			};
+			name = Release;
+		};
+		4AF8F5182CF1F3B7000549B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZAKSG2QLGT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timeMaca.ExpologHackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ExpologHack;
+			};
+			name = Debug;
+		};
+		4AF8F5192CF1F3B7000549B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZAKSG2QLGT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timeMaca.ExpologHackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ExpologHack;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4AF8F4E82CF1F3B5000549B9 /* Build configuration list for PBXProject "ExpologHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AF8F50F2CF1F3B7000549B9 /* Debug */,
+				4AF8F5102CF1F3B7000549B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AF8F5112CF1F3B7000549B9 /* Build configuration list for PBXNativeTarget "ExpologHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AF8F5122CF1F3B7000549B9 /* Debug */,
+				4AF8F5132CF1F3B7000549B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AF8F5142CF1F3B7000549B9 /* Build configuration list for PBXNativeTarget "ExpologHackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AF8F5152CF1F3B7000549B9 /* Debug */,
+				4AF8F5162CF1F3B7000549B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AF8F5172CF1F3B7000549B9 /* Build configuration list for PBXNativeTarget "ExpologHackUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AF8F5182CF1F3B7000549B9 /* Debug */,
+				4AF8F5192CF1F3B7000549B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4AF8F4E52CF1F3B5000549B9 /* Project object */;
+}
