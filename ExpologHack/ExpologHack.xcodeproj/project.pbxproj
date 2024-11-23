@@ -16,6 +16,9 @@
 		4AF8F50E2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F50D2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift */; };
 		4AF8F51E2CF1F441000549B9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F51D2CF1F441000549B9 /* Utils.swift */; };
 		4AF8F5212CF1F453000549B9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F5202CF1F453000549B9 /* Models.swift */; };
+		975192D02CF21D2700384FF1 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 975192CF2CF21D2700384FF1 /* MapboxMaps */; };
+		975192D32CF21E0B00384FF1 /* MapboxNavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = 975192D22CF21E0B00384FF1 /* MapboxNavigationCore */; };
+		975192D52CF21E0B00384FF1 /* MapboxNavigationUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 975192D42CF21E0B00384FF1 /* MapboxNavigationUIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,7 @@
 		4AF8F50D2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpologHackUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4AF8F51D2CF1F441000549B9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4AF8F5202CF1F453000549B9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		975192CD2CF21CE100384FF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975192D52CF21E0B00384FF1 /* MapboxNavigationUIKit in Frameworks */,
+				975192D32CF21E0B00384FF1 /* MapboxNavigationCore in Frameworks */,
+				975192D02CF21D2700384FF1 /* MapboxMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +105,7 @@
 		4AF8F4EF2CF1F3B5000549B9 /* ExpologHack */ = {
 			isa = PBXGroup;
 			children = (
+				975192CD2CF21CE100384FF1 /* Info.plist */,
 				4AF8F51A2CF1F400000549B9 /* App */,
 				4AF8F51B2CF1F40F000549B9 /* Resources */,
 				4AF8F51C2CF1F436000549B9 /* Utils */,
@@ -261,6 +269,10 @@
 				Base,
 			);
 			mainGroup = 4AF8F4E42CF1F3B5000549B9;
+			packageReferences = (
+				975192CE2CF21D2700384FF1 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+				975192D12CF21E0B00384FF1 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */,
+			);
 			productRefGroup = 4AF8F4EE2CF1F3B5000549B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -473,6 +485,7 @@
 				DEVELOPMENT_TEAM = ZAKSG2QLGT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpologHack/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -507,6 +520,7 @@
 				DEVELOPMENT_TEAM = ZAKSG2QLGT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpologHack/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -646,6 +660,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		975192CE2CF21D2700384FF1 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+		975192D12CF21E0B00384FF1 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-navigation-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		975192CF2CF21D2700384FF1 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 975192CE2CF21D2700384FF1 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+		975192D22CF21E0B00384FF1 /* MapboxNavigationCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 975192D12CF21E0B00384FF1 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
+			productName = MapboxNavigationCore;
+		};
+		975192D42CF21E0B00384FF1 /* MapboxNavigationUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 975192D12CF21E0B00384FF1 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
+			productName = MapboxNavigationUIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4AF8F4E52CF1F3B5000549B9 /* Project object */;
 }
