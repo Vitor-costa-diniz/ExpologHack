@@ -19,13 +19,13 @@
 		4A64E1012CF2E47F0089D604 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A64E0F82CF2E47F0089D604 /* Inter-Thin.ttf */; };
 		4A64E1022CF2E47F0089D604 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A64E0F92CF2E47F0089D604 /* Inter-Bold.ttf */; };
 		4A64E1052CF2E4E80089D604 /* TokenFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E1042CF2E4E80089D604 /* TokenFont.swift */; };
+		4A64E1072CF2E6640089D604 /* AddVehicleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E1062CF2E6640089D604 /* AddVehicleSheet.swift */; };
 		4AF8F4F12CF1F3B5000549B9 /* ExpologHackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F02CF1F3B5000549B9 /* ExpologHackApp.swift */; };
 		4AF8F4F52CF1F3B6000549B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F42CF1F3B6000549B9 /* Assets.xcassets */; };
 		4AF8F4F82CF1F3B6000549B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F72CF1F3B6000549B9 /* Preview Assets.xcassets */; };
 		4AF8F5022CF1F3B7000549B9 /* ExpologHackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F5012CF1F3B7000549B9 /* ExpologHackTests.swift */; };
 		4AF8F50C2CF1F3B7000549B9 /* ExpologHackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F50B2CF1F3B7000549B9 /* ExpologHackUITests.swift */; };
 		4AF8F50E2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F50D2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift */; };
-		4AF8F51E2CF1F441000549B9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F51D2CF1F441000549B9 /* Utils.swift */; };
 		4AF8F5212CF1F453000549B9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F5202CF1F453000549B9 /* Models.swift */; };
 		9751938B2CF272F800384FF1 /* FreightListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9751938A2CF272F800384FF1 /* FreightListView.swift */; };
 		9751938E2CF2732300384FF1 /* PackageInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9751938D2CF2732300384FF1 /* PackageInfoView.swift */; };
@@ -78,6 +78,7 @@
 		4A64E0F82CF2E47F0089D604 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
 		4A64E0F92CF2E47F0089D604 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		4A64E1042CF2E4E80089D604 /* TokenFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenFont.swift; sourceTree = "<group>"; };
+		4A64E1062CF2E6640089D604 /* AddVehicleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleSheet.swift; sourceTree = "<group>"; };
 		4AF8F4ED2CF1F3B5000549B9 /* ExpologHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpologHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF8F4F02CF1F3B5000549B9 /* ExpologHackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpologHackApp.swift; sourceTree = "<group>"; };
 		4AF8F4F42CF1F3B6000549B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		4AF8F5072CF1F3B7000549B9 /* ExpologHackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpologHackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF8F50B2CF1F3B7000549B9 /* ExpologHackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpologHackUITests.swift; sourceTree = "<group>"; };
 		4AF8F50D2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpologHackUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4AF8F51D2CF1F441000549B9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4AF8F5202CF1F453000549B9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		9751938A2CF272F800384FF1 /* FreightListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreightListView.swift; sourceTree = "<group>"; };
 		9751938D2CF2732300384FF1 /* PackageInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageInfoView.swift; sourceTree = "<group>"; };
@@ -138,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				4A26AF652CF2D2D500940C4D /* VehicleView.swift */,
+				4A64E1062CF2E6640089D604 /* AddVehicleSheet.swift */,
 			);
 			path = Vehicles;
 			sourceTree = "<group>";
@@ -256,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				4A64E1032CF2E4CC0089D604 /* Tokens */,
-				4AF8F51D2CF1F441000549B9 /* Utils.swift */,
 				975193972CF273F700384FF1 /* Persistence.swift */,
 				975193A82CF27BBF00384FF1 /* HideKeyBoard.swift */,
 			);
@@ -488,10 +488,10 @@
 				4A26AF682CF2D53200940C4D /* VehicleViewModel.swift in Sources */,
 				4A26AF662CF2D2D500940C4D /* VehicleView.swift in Sources */,
 				975193982CF273F700384FF1 /* Persistence.swift in Sources */,
+				4A64E1072CF2E6640089D604 /* AddVehicleSheet.swift in Sources */,
 				975193A52CF2798000384FF1 /* DescriptionItem.swift in Sources */,
 				4AF8F4F12CF1F3B5000549B9 /* ExpologHackApp.swift in Sources */,
 				975193942CF273A700384FF1 /* PackageViewModel.swift in Sources */,
-				4AF8F51E2CF1F441000549B9 /* Utils.swift in Sources */,
 				4AF8F5212CF1F453000549B9 /* Models.swift in Sources */,
 				975193D82CF2BE2C00384FF1 /* BusinessData.xcdatamodeld in Sources */,
 				9751938E2CF2732300384FF1 /* PackageInfoView.swift in Sources */,
