@@ -26,6 +26,11 @@ struct VehicleSheet: View {
                 
                 VStack {
                     formVehicle
+                        .gesture(
+                            TapGesture().onEnded { _ in
+                                self.dismissKeyboard()
+                            }
+                        )
                         .sheet(isPresented: $showNameSheet, content: {
                             NameSheet(showSheet: $showNameSheet, name: $temporaryName)
                         })
@@ -110,10 +115,10 @@ struct VehicleSheet: View {
                         
                     case .plate:
                         TextField(text: $viewModel.vehiclePlate) {
-                            Text("000000")
+                            Text("0000000")
                                 .foregroundStyle(Color.secondary)
                         }
-                        .frame(width: 60)
+                        .frame(width: 74)
                         
                     case .loadCapacity:
                         HStack {
@@ -131,7 +136,7 @@ struct VehicleSheet: View {
                                 .foregroundStyle(Color.secondary)
                         }
                         .keyboardType(.decimalPad)
-                        .frame(width: viewModel.height.count == 0 ? 9 : CGFloat(viewModel.height.count) * 9)
+                        .frame(width: viewModel.height.count == 0 ? 10 : CGFloat(viewModel.height.count) * 10)
                         .padding(.trailing, -5)
                         Text("m")
                         
@@ -151,7 +156,7 @@ struct VehicleSheet: View {
                                 .foregroundStyle(Color.secondary)
                         }
                         .keyboardType(.decimalPad)
-                        .frame(width: viewModel.width.count == 0 ? 9 : CGFloat(viewModel.width.count) * 9)
+                        .frame(width: viewModel.width.count == 0 ? 10 : CGFloat(viewModel.width.count) * 10)
                         .padding(.trailing, -5)
                         Text("m")
                     }
@@ -174,7 +179,7 @@ struct VehicleSheet: View {
         .listStyle(DefaultListStyle())
         .scrollContentBackground(.hidden)
         .onChange(of: viewModel.vehiclePlate) { value in
-            if viewModel.vehiclePlate.count > 6 {
+            if viewModel.vehiclePlate.count > 7 {
                 viewModel.vehiclePlate.removeLast()
             }
         }
@@ -193,6 +198,12 @@ struct VehicleSheet: View {
                 viewModel.width.removeLast()
             }
         }
+    }
+}
+
+extension View {
+    func dismissKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
