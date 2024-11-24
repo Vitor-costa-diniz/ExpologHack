@@ -11,6 +11,7 @@ struct CreateRouteSheet: View {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject var viewModel: FreightViewModel
     @State private var stopPoint: String = ""
+    @State private var navigateToMap = false
     
     var body: some View {
         NavigationStack {
@@ -107,6 +108,9 @@ struct CreateRouteSheet: View {
                     Button(action: {
                         if !viewModel.selectLoad.isEmpty && !viewModel.stopPoints.isEmpty && !viewModel.derparturePoint.isEmpty {
                             viewModel.stopPoints.append(stopPoint)
+                            IAController().sendNewMessage(departure: viewModel.derparturePoint,
+                                                          content: viewModel.stopPoints)
+                            navigateToMap = true
                         }
                     }, label: {
                         Text("Iniciar Viagem")
@@ -121,12 +125,16 @@ struct CreateRouteSheet: View {
                                 : Color.inactivated
                                     .clipShape(.rect(cornerRadius: 8))
                             }
-                    })
+                    }).frame(maxWidth: .infinity, alignment: .center)
                     
                 }
                 .padding(.top, 32)
                 .padding(.horizontal, 24)
             }
+            .sheet(isPresented: $navigateToMap, content: {
+                NavigationView(navigation: Navigation(), addresses: ["Rua Bismarck 323, Parangaba, Fortaleza-CE", "Rua Jose Villar 3333, Fortaleza-CE"], departure:  "Rua Suíça 120, Maraponga, Fortaleza - CE")
+            })
+            
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancelar") {

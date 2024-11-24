@@ -53,7 +53,7 @@ struct FreightListView: View {
             
             Spacer()
             
-            Button(action: {}) {
+            Button(action: {showCreateSheet.toggle()}) {
                 Text("Criar entrega")
                     .font(.custom(TokenFont.semibold.rawValue, size: 14))
                     .foregroundStyle(.white)

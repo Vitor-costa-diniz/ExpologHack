@@ -46,12 +46,21 @@
 		975193A92CF27BBF00384FF1 /* HideKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193A82CF27BBF00384FF1 /* HideKeyBoard.swift */; };
 		975193AB2CF27C0500384FF1 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193AA2CF27C0500384FF1 /* InputField.swift */; };
 		975193B72CF27FF900384FF1 /* PackagesInFreightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193B62CF27FF900384FF1 /* PackagesInFreightView.swift */; };
-		975193B92CF284A900384FF1 /* NewFreightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193B82CF284A900384FF1 /* NewFreightView.swift */; };
 		975193D82CF2BE2C00384FF1 /* BusinessData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 975193D62CF2BE2C00384FF1 /* BusinessData.xcdatamodeld */; };
 		975193DD2CF2BFB000384FF1 /* Freight+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193D92CF2BFB000384FF1 /* Freight+CoreDataClass.swift */; };
 		975193DE2CF2BFB000384FF1 /* Freight+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193DA2CF2BFB000384FF1 /* Freight+CoreDataProperties.swift */; };
 		975193DF2CF2BFB000384FF1 /* Package+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193DB2CF2BFB000384FF1 /* Package+CoreDataClass.swift */; };
 		975193E02CF2BFB000384FF1 /* Package+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193DC2CF2BFB000384FF1 /* Package+CoreDataProperties.swift */; };
+		975C73172CF3437F007C523F /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 975C73162CF3437F007C523F /* MapboxMaps */; };
+		975C731A2CF343AA007C523F /* MapboxNavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = 975C73192CF343AA007C523F /* MapboxNavigationCore */; };
+		975C731C2CF343AA007C523F /* MapboxNavigationUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 975C731B2CF343AA007C523F /* MapboxNavigationUIKit */; };
+		975C731F2CF343CD007C523F /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 975C731E2CF343CD007C523F /* OpenAI */; };
+		975C73232CF34432007C523F /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975C73222CF34432007C523F /* NavigationView.swift */; };
+		975C73252CF3449D007C523F /* IAController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975C73242CF3449D007C523F /* IAController.swift */; };
+		975C73272CF344F3007C523F /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975C73262CF344F3007C523F /* Navigation.swift */; };
+		975C73292CF3452B007C523F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975C73282CF3452B007C523F /* MapViewController.swift */; };
+		975C732B2CF3454A007C523F /* NavigationControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975C732A2CF3454A007C523F /* NavigationControlsView.swift */; };
+		975C73302CF34596007C523F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975C732F2CF34596007C523F /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,12 +124,17 @@
 		975193A82CF27BBF00384FF1 /* HideKeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyBoard.swift; sourceTree = "<group>"; };
 		975193AA2CF27C0500384FF1 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		975193B62CF27FF900384FF1 /* PackagesInFreightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesInFreightView.swift; sourceTree = "<group>"; };
-		975193B82CF284A900384FF1 /* NewFreightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFreightView.swift; sourceTree = "<group>"; };
 		975193D72CF2BE2C00384FF1 /* BusinessData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BusinessData.xcdatamodel; sourceTree = "<group>"; };
 		975193D92CF2BFB000384FF1 /* Freight+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Freight+CoreDataClass.swift"; sourceTree = "<group>"; };
 		975193DA2CF2BFB000384FF1 /* Freight+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Freight+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		975193DB2CF2BFB000384FF1 /* Package+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Package+CoreDataClass.swift"; sourceTree = "<group>"; };
 		975193DC2CF2BFB000384FF1 /* Package+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Package+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		975C73222CF34432007C523F /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		975C73242CF3449D007C523F /* IAController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAController.swift; sourceTree = "<group>"; };
+		975C73262CF344F3007C523F /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		975C73282CF3452B007C523F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		975C732A2CF3454A007C523F /* NavigationControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControlsView.swift; sourceTree = "<group>"; };
+		975C732F2CF34596007C523F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +142,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975C731C2CF343AA007C523F /* MapboxNavigationUIKit in Frameworks */,
+				975C731A2CF343AA007C523F /* MapboxNavigationCore in Frameworks */,
+				975C731F2CF343CD007C523F /* OpenAI in Frameworks */,
+				975C73172CF3437F007C523F /* MapboxMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +337,7 @@
 		975193852CF2725800384FF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				975C73212CF343F4007C523F /* Map */,
 				4A26AF642CF2D2C200940C4D /* Vehicles */,
 				975193A32CF2796B00384FF1 /* Component */,
 				9751938C2CF2731100384FF1 /* Package */,
@@ -343,7 +362,6 @@
 			children = (
 				9751938A2CF272F800384FF1 /* FreightListView.swift */,
 				975193B62CF27FF900384FF1 /* PackagesInFreightView.swift */,
-				975193B82CF284A900384FF1 /* NewFreightView.swift */,
 				4AAF26D12CF31D0600101F30 /* FinishRouteView.swift */,
 				4AAF26D32CF3242E00101F30 /* RouteCard.swift */,
 				4AAF26D52CF331DC00101F30 /* CreateRouteSheet.swift */,
@@ -365,6 +383,9 @@
 				975193932CF273A700384FF1 /* PackageViewModel.swift */,
 				975193952CF273B300384FF1 /* FreightViewModel.swift */,
 				4A26AF672CF2D53200940C4D /* VehicleViewModel.swift */,
+				975C73242CF3449D007C523F /* IAController.swift */,
+				975C73262CF344F3007C523F /* Navigation.swift */,
+				975C73282CF3452B007C523F /* MapViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -377,6 +398,16 @@
 				975193AA2CF27C0500384FF1 /* InputField.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		975C73212CF343F4007C523F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				975C732A2CF3454A007C523F /* NavigationControlsView.swift */,
+				975C73222CF34432007C523F /* NavigationView.swift */,
+				975C732F2CF34596007C523F /* MapView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,7 +499,9 @@
 			);
 			mainGroup = 4AF8F4E42CF1F3B5000549B9;
 			packageReferences = (
-				975193BD2CF29C6300384FF1 /* XCRemoteSwiftPackageReference "OpenAI" */,
+				975C73152CF3437F007C523F /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+				975C73182CF343AA007C523F /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */,
+				975C731D2CF343CD007C523F /* XCRemoteSwiftPackageReference "OpenAI" */,
 			);
 			productRefGroup = 4AF8F4EE2CF1F3B5000549B9 /* Products */;
 			projectDirPath = "";
@@ -529,14 +562,16 @@
 				975193982CF273F700384FF1 /* Persistence.swift in Sources */,
 				4A64E1072CF2E6640089D604 /* VehicleSheet.swift in Sources */,
 				975193A52CF2798000384FF1 /* DescriptionItem.swift in Sources */,
+				975C73302CF34596007C523F /* MapView.swift in Sources */,
+				975C73252CF3449D007C523F /* IAController.swift in Sources */,
 				4AF8F4F12CF1F3B5000549B9 /* ExpologHackApp.swift in Sources */,
 				975193942CF273A700384FF1 /* PackageViewModel.swift in Sources */,
 				975193D82CF2BE2C00384FF1 /* BusinessData.xcdatamodeld in Sources */,
 				4AAF26CE2CF2FDD000101F30 /* AddLoadCapacitySheet.swift in Sources */,
+				975C73292CF3452B007C523F /* MapViewController.swift in Sources */,
 				9751938E2CF2732300384FF1 /* PackageInfoView.swift in Sources */,
 				4A64E10F2CF2F1800089D604 /* ActionListRow.swift in Sources */,
 				4AAF26D22CF31D0600101F30 /* FinishRouteView.swift in Sources */,
-				975193B92CF284A900384FF1 /* NewFreightView.swift in Sources */,
 				975193AB2CF27C0500384FF1 /* InputField.swift in Sources */,
 				975193A72CF27B8700384FF1 /* SearchBar.swift in Sources */,
 				4A64E1052CF2E4E80089D604 /* TokenFont.swift in Sources */,
@@ -545,8 +580,11 @@
 				975193962CF273B300384FF1 /* FreightViewModel.swift in Sources */,
 				4AAF26CC2CF2FBCF00101F30 /* NameSheet.swift in Sources */,
 				975193DD2CF2BFB000384FF1 /* Freight+CoreDataClass.swift in Sources */,
+				975C732B2CF3454A007C523F /* NavigationControlsView.swift in Sources */,
+				975C73272CF344F3007C523F /* Navigation.swift in Sources */,
 				975193DE2CF2BFB000384FF1 /* Freight+CoreDataProperties.swift in Sources */,
 				4A64E10A2CF2E9FB0089D604 /* ListRow.swift in Sources */,
+				975C73232CF34432007C523F /* NavigationView.swift in Sources */,
 				4AAF26D42CF3242E00101F30 /* RouteCard.swift in Sources */,
 				975193DF2CF2BFB000384FF1 /* Package+CoreDataClass.swift in Sources */,
 				975193E02CF2BFB000384FF1 /* Package+CoreDataProperties.swift in Sources */,
@@ -715,7 +753,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpologHack/Preview Content\"";
-				DEVELOPMENT_TEAM = ZAKSG2QLGT;
+				DEVELOPMENT_TEAM = Y8XB2TQUP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExpologHack/Info.plist;
@@ -751,7 +789,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpologHack/Preview Content\"";
-				DEVELOPMENT_TEAM = ZAKSG2QLGT;
+				DEVELOPMENT_TEAM = Y8XB2TQUP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExpologHack/Info.plist;
@@ -897,7 +935,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		975193BD2CF29C6300384FF1 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+		975C73152CF3437F007C523F /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+		975C73182CF343AA007C523F /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-navigation-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.5.0;
+			};
+		};
+		975C731D2CF343CD007C523F /* XCRemoteSwiftPackageReference "OpenAI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MacPaw/OpenAI";
 			requirement = {
@@ -906,6 +960,29 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		975C73162CF3437F007C523F /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 975C73152CF3437F007C523F /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+		975C73192CF343AA007C523F /* MapboxNavigationCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 975C73182CF343AA007C523F /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
+			productName = MapboxNavigationCore;
+		};
+		975C731B2CF343AA007C523F /* MapboxNavigationUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 975C73182CF343AA007C523F /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
+			productName = MapboxNavigationUIKit;
+		};
+		975C731E2CF343CD007C523F /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 975C731D2CF343CD007C523F /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		975193D62CF2BE2C00384FF1 /* BusinessData.xcdatamodeld */ = {
