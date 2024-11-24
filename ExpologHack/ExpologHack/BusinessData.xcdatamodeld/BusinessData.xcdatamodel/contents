@@ -18,10 +18,14 @@
         <relationship name="packageToFreight" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Freight" inverseName="freightToPackage" inverseEntity="Freight"/>
     </entity>
     <entity name="Vehicle" representedClassName="Vehicle" syncable="YES" codeGenerationType="class">
+        <attribute name="height" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="length" optional="YES" attributeType="String"/>
         <attribute name="loadCapacity" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="plate" optional="YES" attributeType="String"/>
+        <attribute name="specs" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="width" optional="YES" attributeType="String"/>
     </entity>
 </model>

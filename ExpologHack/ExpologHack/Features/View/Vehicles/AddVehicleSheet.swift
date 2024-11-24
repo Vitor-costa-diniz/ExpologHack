@@ -14,6 +14,7 @@ struct AddVehicleSheet: View {
     @State private var showCapacitySheet: Bool = false
     @State private var temporaryName: String?
     @State private var temporaryCapacity: String?
+    @State private var temporarySpecs: String?
     
     var body: some View {
         NavigationStack {
@@ -53,10 +54,12 @@ struct AddVehicleSheet: View {
                         .onAppear {
                             temporaryName = viewModel.name
                             temporaryCapacity = viewModel.capacity
+                            temporarySpecs = viewModel.specs
                         }
                         .onDisappear {
                             temporaryName = nil
                             temporaryCapacity = nil
+                            temporarySpecs = nil
                         }
                 }
             }
@@ -139,7 +142,7 @@ struct AddVehicleSheet: View {
             }
             
             ActionListRow(title: "Especificidades") {
-                Text("Nenhuma")
+                Text("\(temporarySpecs ?? "Nenhuma")")
                     .foregroundStyle(Color.secondary)
                     .font(.custom(TokenFont.regular.rawValue, size: 16))
                 Image(.arrowRightBold)

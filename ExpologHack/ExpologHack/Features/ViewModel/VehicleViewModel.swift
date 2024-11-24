@@ -13,6 +13,7 @@ class VehicleViewModel: ObservableObject {
     @Published var vehicles: [Vehicle] = []
     @Published var name: String?
     @Published var capacity: String?
+    @Published var specs: String?
     @Published var selectVehicleType: VehicleType = .truck
     @Published var vehiclePlate: String = ""
     @Published var height: String = ""
@@ -33,11 +34,15 @@ class VehicleViewModel: ObservableObject {
     
     func createVehicle() {
         let newContact = Vehicle(context: viewContext)
-        newContact.name = ""
         newContact.id = UUID().description
+        newContact.name = name ?? "Paulo"
+        newContact.type = selectVehicleType.rawValue
         newContact.plate = vehiclePlate
-        newContact.type = "Fiat Uno"
-        newContact.loadCapacity = "100T"
+        newContact.loadCapacity = capacity ?? "0T"
+        newContact.height = height
+        newContact.length = length
+        newContact.width = width
+        newContact.specs = specs
         
         do {
             try viewContext.save()
@@ -57,5 +62,6 @@ class VehicleViewModel: ObservableObject {
         width = ""
         name = nil
         capacity = nil
+        specs = nil
     }
 }
