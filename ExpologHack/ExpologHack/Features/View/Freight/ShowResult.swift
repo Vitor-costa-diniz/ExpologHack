@@ -14,11 +14,11 @@ struct ShowResult: View {
                 .ignoresSafeArea()
             
             ScrollView {
-                VStack {
+                VStack(spacing: 16) {
                     routeStopsInfo
                         .padding(.top, -2)
                     
-                    driverCode
+                    driverInfos
                     
                     fuelInfos
                 }
@@ -88,55 +88,68 @@ struct ShowResult: View {
         .padding(.horizontal, 16)
     }
     
-    private var driverCode: some View {
+    private var driverInfos: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Código do cliente")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                        .font(.custom(TokenFont.medium.rawValue, size: 16))
+                        .foregroundStyle(.neutral0)
+                    
                     Text("#500424")
-                        .font(.body)
-                        .bold()
+                        .font(.custom(TokenFont.medium.rawValue, size: 14))
+                        .foregroundStyle(.neutral100)
                 }
                 
                 Spacer()
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Mercadoria")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                        .font(.custom(TokenFont.medium.rawValue, size: 16))
+                        .foregroundStyle(.neutral0)
+                    
                     Text("Frutas")
-                        .font(.body)
-                        .bold()
-                        .foregroundColor(.blue)
+                        .font(.custom(TokenFont.medium.rawValue, size: 14))
+                        .foregroundStyle(.neutral100)
                 }
+                
                 Spacer()
             }
             
             HStack(alignment: .lastTextBaseline) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Pacotes")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                        .font(.custom(TokenFont.medium.rawValue, size: 16))
+                        .foregroundStyle(.neutral0)
+                    
                     Text("20 pallets")
-                        .font(.body)
-                        .bold()
+                        .font(.custom(TokenFont.medium.rawValue, size: 14))
+                        .foregroundStyle(.neutral100)
                 }
+                
                 Spacer()
+                
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Peso")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                        .font(.custom(TokenFont.medium.rawValue, size: 16))
+                        .foregroundStyle(.neutral0)
+                    
                     Text("15000 Quilos")
-                        .font(.body)
-                        .bold()
+                        .font(.custom(TokenFont.medium.rawValue, size: 14))
+                        .foregroundStyle(.neutral100)
+                    
                 }
+                .offset(x: 35)
+                
+                Spacer()
             }
         }
         .padding()
-        .background(Color(.secondarySystemBackground))
-        .cornerRadius(12)
+        .background(
+            Color.cardBackground
+                .clipShape(.rect(cornerRadius: 16))
+        )
+        .padding(.horizontal, 16)
     }
     
     private var fuelInfos: some View {
