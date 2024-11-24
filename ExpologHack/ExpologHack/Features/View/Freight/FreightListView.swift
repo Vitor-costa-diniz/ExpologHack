@@ -13,6 +13,7 @@ struct FreightListView: View {
     @ObservedObject var freightViewModel: FreightViewModel
     @ObservedObject var packageViewModel: PackageViewModel
     @State private var showResult: Bool = false
+    @State private var showCreateSheet: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -37,6 +38,9 @@ struct FreightListView: View {
             .navigationDestination(isPresented: $showResult) {
                 ShowResult()
             }
+            .sheet(isPresented: $showCreateSheet, content: {
+                CreateRouteSheet(viewModel: freightViewModel)
+            })
         }
     }
     
@@ -55,7 +59,7 @@ struct FreightListView: View {
             
             Spacer()
             
-            Button(action: {}) {
+            Button(action: {showCreateSheet.toggle()}) {
                 Text("Criar entrega")
                     .font(.custom(TokenFont.semibold.rawValue, size: 14))
                     .foregroundStyle(.white)
@@ -85,7 +89,9 @@ struct FreightListView: View {
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 32)
             
-            Button(action: {}) {
+            Button(action: {
+                showCreateSheet.toggle()
+            }) {
                 Text("Criar entrega")
                     .font(.custom(TokenFont.semibold.rawValue, size: 14))
                     .foregroundStyle(.white)

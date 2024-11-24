@@ -15,6 +15,9 @@ class FreightViewModel: ObservableObject {
     let viewContext = PersistenceController.shared.container.viewContext
     
     @Published var freight: [Freight] = []
+    @Published var derparturePoint: String = ""
+    @Published var stopPoints: [String] = []
+    @Published var selectLoad: String = ""
     
     init() {
         self.fetch()
