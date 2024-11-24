@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BaseListView: View {
-    @State private var selectedIndex = 1
+    @State private var selectedIndex = 0
     @ObservedObject var packageViewModel: PackageViewModel
     @ObservedObject var freightViewModel: FreightViewModel
     @ObservedObject var vehicleViewModel: VehicleViewModel
@@ -22,7 +22,9 @@ struct BaseListView: View {
     
     var body: some View {
         TabView(selection: $selectedIndex) {
-            FreightListView(freightViewModel: freightViewModel, packageViewModel: packageViewModel)
+            FreightListView(hasVehicle: !vehicleViewModel.vehicles.isEmpty,
+                            freightViewModel: freightViewModel,
+                            packageViewModel: packageViewModel)
                 .tag(0)
                 .tabItem {
                     Label(

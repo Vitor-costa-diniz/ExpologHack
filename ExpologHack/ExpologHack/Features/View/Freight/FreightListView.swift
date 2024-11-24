@@ -9,60 +9,109 @@ import SwiftUI
 
 struct FreightListView: View {
     @State var searchText: String = ""
-
+    let hasVehicle: Bool
     @ObservedObject var freightViewModel: FreightViewModel
     @ObservedObject var packageViewModel: PackageViewModel
     
     var body: some View {
-        NavigationView {
-            ZStack(alignment: .top) {
+        NavigationStack {
+            ZStack {
+                Color.neutral600
+                    .ignoresSafeArea()
+                
                 VStack {
-                    VStack {
-                        if !freightViewModel.freight.isEmpty {
-                                SearchBar(text: $searchText)
-                                    .padding(.bottom, 10)
-                                List {
-                                    ForEach(freightViewModel.freight.filter({searchText.isEmpty ? true : $0.code!.contains(searchText) })) { item in
-                                        NavigationLink(destination: PackagesInFreightView(freight: item, freightViewModel: freightViewModel, packageViewModel: packageViewModel)) {
-                                            HStack {
-                                                Text(item.code ?? "no model")
-                                            }
-                                        }
-                                    }.onDelete(perform: { indexSet in
-                                        indexSet.forEach { index in
-                                            let vehicle = freightViewModel.freight[index]
-                                            FreightViewModel().deleteFreight(vehicle: vehicle)
-                                        }
-                                    })
-                                }
-                            } else {
-                                HStack {
-                                    VStack(alignment: .center) {
-                                        Spacer()
-                                        Text("Adicione um novo Frete clicando em +")
-                                        .fontWeight(.regular)
-                                        .font(.system(size: 15))
-                                        Spacer()
-                                    }
-                                }
-
-                            }
-                    }
-
-                }
-            }
-            .navigationTitle("Fretes")
-               
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: NewFreightView(packageViewModel: packageViewModel, freightViewModel: freightViewModel)
-                    ) {
-                        Image(systemName: "plus")
-                            .padding(.trailing, 20)
-                            .padding(.top, 30)
+                    if hasVehicle {
+                        
+                        if freightViewModel.freight.isEmpty {
+                            emptyRoutes
+                        } else {
+                            listRoutes
+                        }
+                        
+                    } else {
+                        emptyState
                     }
                 }
             }
+            .navigationTitle(freightViewModel.freight.isEmpty ? "" : "Minhas Viagens")
         }
     }
+    
+    private var listRoutes: some View {
+        VStack {
+            ScrollView {
+                ForEach(0 ..< 2, id: \.self) { _ in
+                    RouteCard()
+                        .padding(.bottom, 8)
+                }
+                .padding(.top, 18)
+            }
+            
+            Spacer()
+            
+            Button(action: {}) {
+                Text("Criar entrega")
+                    .font(.custom(TokenFont.semibold.rawValue, size: 14))
+                    .foregroundStyle(.white)
+                    .frame(height: 48)
+                    .frame(maxWidth: 345)
+                    .background {
+                        Color.primary500
+                            .clipShape(.rect(cornerRadius: 8))
+                    }
+            }
+            .padding(.bottom, 24)
+        }
+    }
+    
+    private var emptyRoutes: some View {
+        VStack(spacing: 8) {
+            Image(.miniMap)
+                .padding(.bottom, 8)
+            
+            Text("Faça sua primeira entrega conosco!")
+                .font(.custom(TokenFont.semibold.rawValue, size: 20))
+                .foregroundStyle(.white)
+            
+            Text("Suas entregas realizadas serão exibidas nessa seção, faça sua primeira viagem conosco.")
+                .font(.custom(TokenFont.medium.rawValue, size: 16))
+                .foregroundStyle(.white)
+                .multilineTextAlignment(.center)
+                .padding(.bottom, 32)
+            
+            Button(action: {}) {
+                Text("Criar entrega")
+                    .font(.custom(TokenFont.semibold.rawValue, size: 14))
+                    .foregroundStyle(.white)
+                    .frame(height: 48)
+                    .frame(maxWidth: 345)
+                    .background {
+                        Color.primary500
+                            .clipShape(.rect(cornerRadius: 8))
+                    }
+            }
+        }
+        .padding(.horizontal, 24)
+    }
+}
+
+private var emptyState: some View {
+    VStack(spacing: 8) {
+        Image(.noVehicle)
+            .padding(.bottom, 8)
+        
+        Text("Cadastre um veículo antes.")
+            .font(.custom(TokenFont.semibold.rawValue, size: 20))
+            .foregroundStyle(.white)
+        
+        Text("Antes de iniciar uma entrega, é preciso cadastrar seu veículo na plataforma.")
+            .font(.custom(TokenFont.medium.rawValue, size: 16))
+            .foregroundStyle(.white)
+            .multilineTextAlignment(.center)
+    }
+    .padding(.horizontal, 24)
+}
+
+#Preview {
+    FreightListView(hasVehicle: false, freightViewModel: .init(), packageViewModel: .init())
 }
