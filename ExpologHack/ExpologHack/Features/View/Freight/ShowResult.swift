@@ -57,7 +57,7 @@ struct ShowResult: View {
                             .frame(width: 52, height: 52)
                             .background(
                                 Circle()
-                                    .foregroundStyle(Color.primary200)
+                                    .foregroundStyle(update.isActive ? Color.primary200 : Color.neutral200)
                             )
                         
                         VStack(alignment: .leading, spacing: 4) {
