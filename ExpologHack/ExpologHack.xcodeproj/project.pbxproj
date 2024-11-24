@@ -16,6 +16,24 @@
 		4AF8F50E2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F50D2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift */; };
 		4AF8F51E2CF1F441000549B9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F51D2CF1F441000549B9 /* Utils.swift */; };
 		4AF8F5212CF1F453000549B9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F5202CF1F453000549B9 /* Models.swift */; };
+		9751938B2CF272F800384FF1 /* FreightListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9751938A2CF272F800384FF1 /* FreightListView.swift */; };
+		9751938E2CF2732300384FF1 /* PackageInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9751938D2CF2732300384FF1 /* PackageInfoView.swift */; };
+		975193942CF273A700384FF1 /* PackageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193932CF273A700384FF1 /* PackageViewModel.swift */; };
+		975193962CF273B300384FF1 /* FreightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193952CF273B300384FF1 /* FreightViewModel.swift */; };
+		975193982CF273F700384FF1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193972CF273F700384FF1 /* Persistence.swift */; };
+		975193A22CF277F700384FF1 /* BaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193A12CF277F700384FF1 /* BaseListView.swift */; };
+		975193A52CF2798000384FF1 /* DescriptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193A42CF2798000384FF1 /* DescriptionItem.swift */; };
+		975193A72CF27B8700384FF1 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193A62CF27B8700384FF1 /* SearchBar.swift */; };
+		975193A92CF27BBF00384FF1 /* HideKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193A82CF27BBF00384FF1 /* HideKeyBoard.swift */; };
+		975193AB2CF27C0500384FF1 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193AA2CF27C0500384FF1 /* InputField.swift */; };
+		975193B72CF27FF900384FF1 /* PackagesInFreightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193B62CF27FF900384FF1 /* PackagesInFreightView.swift */; };
+		975193B92CF284A900384FF1 /* NewFreightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193B82CF284A900384FF1 /* NewFreightView.swift */; };
+		975193BF2CF29C6300384FF1 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 975193BE2CF29C6300384FF1 /* OpenAI */; };
+		975193D82CF2BE2C00384FF1 /* BusinessData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 975193D62CF2BE2C00384FF1 /* BusinessData.xcdatamodeld */; };
+		975193DD2CF2BFB000384FF1 /* Freight+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193D92CF2BFB000384FF1 /* Freight+CoreDataClass.swift */; };
+		975193DE2CF2BFB000384FF1 /* Freight+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193DA2CF2BFB000384FF1 /* Freight+CoreDataProperties.swift */; };
+		975193DF2CF2BFB000384FF1 /* Package+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193DB2CF2BFB000384FF1 /* Package+CoreDataClass.swift */; };
+		975193E02CF2BFB000384FF1 /* Package+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193DC2CF2BFB000384FF1 /* Package+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +66,23 @@
 		4AF8F50D2CF1F3B7000549B9 /* ExpologHackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpologHackUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4AF8F51D2CF1F441000549B9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4AF8F5202CF1F453000549B9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		9751938A2CF272F800384FF1 /* FreightListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreightListView.swift; sourceTree = "<group>"; };
+		9751938D2CF2732300384FF1 /* PackageInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageInfoView.swift; sourceTree = "<group>"; };
+		975193932CF273A700384FF1 /* PackageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageViewModel.swift; sourceTree = "<group>"; };
+		975193952CF273B300384FF1 /* FreightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreightViewModel.swift; sourceTree = "<group>"; };
+		975193972CF273F700384FF1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		975193A12CF277F700384FF1 /* BaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListView.swift; sourceTree = "<group>"; };
+		975193A42CF2798000384FF1 /* DescriptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionItem.swift; sourceTree = "<group>"; };
+		975193A62CF27B8700384FF1 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		975193A82CF27BBF00384FF1 /* HideKeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyBoard.swift; sourceTree = "<group>"; };
+		975193AA2CF27C0500384FF1 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		975193B62CF27FF900384FF1 /* PackagesInFreightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesInFreightView.swift; sourceTree = "<group>"; };
+		975193B82CF284A900384FF1 /* NewFreightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFreightView.swift; sourceTree = "<group>"; };
+		975193D72CF2BE2C00384FF1 /* BusinessData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BusinessData.xcdatamodel; sourceTree = "<group>"; };
+		975193D92CF2BFB000384FF1 /* Freight+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Freight+CoreDataClass.swift"; sourceTree = "<group>"; };
+		975193DA2CF2BFB000384FF1 /* Freight+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Freight+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		975193DB2CF2BFB000384FF1 /* Package+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Package+CoreDataClass.swift"; sourceTree = "<group>"; };
+		975193DC2CF2BFB000384FF1 /* Package+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Package+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975193BF2CF29C6300384FF1 /* OpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +140,7 @@
 				4AF8F51F2CF1F448000549B9 /* Models */,
 				4AF8F5222CF1F458000549B9 /* Features */,
 				4AF8F4F62CF1F3B6000549B9 /* Preview Content */,
+				975193D62CF2BE2C00384FF1 /* BusinessData.xcdatamodeld */,
 			);
 			path = ExpologHack;
 			sourceTree = "<group>";
@@ -153,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				4AF8F51D2CF1F441000549B9 /* Utils.swift */,
+				975193972CF273F700384FF1 /* Persistence.swift */,
+				975193A82CF27BBF00384FF1 /* HideKeyBoard.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -160,6 +199,7 @@
 		4AF8F51F2CF1F448000549B9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				975193862CF2726E00384FF1 /* BasicModel */,
 				4AF8F5202CF1F453000549B9 /* Models.swift */,
 			);
 			path = Models;
@@ -168,9 +208,70 @@
 		4AF8F5222CF1F458000549B9 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				975193912CF2737900384FF1 /* ViewModel */,
+				975193852CF2725800384FF1 /* View */,
 				4AF8F4F22CF1F3B5000549B9 /* ContentView.swift */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		975193852CF2725800384FF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				975193A32CF2796B00384FF1 /* Component */,
+				9751938C2CF2731100384FF1 /* Package */,
+				975193872CF272A300384FF1 /* Freight */,
+				975193A12CF277F700384FF1 /* BaseListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		975193862CF2726E00384FF1 /* BasicModel */ = {
+			isa = PBXGroup;
+			children = (
+				975193D92CF2BFB000384FF1 /* Freight+CoreDataClass.swift */,
+				975193DA2CF2BFB000384FF1 /* Freight+CoreDataProperties.swift */,
+				975193DB2CF2BFB000384FF1 /* Package+CoreDataClass.swift */,
+				975193DC2CF2BFB000384FF1 /* Package+CoreDataProperties.swift */,
+			);
+			path = BasicModel;
+			sourceTree = "<group>";
+		};
+		975193872CF272A300384FF1 /* Freight */ = {
+			isa = PBXGroup;
+			children = (
+				9751938A2CF272F800384FF1 /* FreightListView.swift */,
+				975193B62CF27FF900384FF1 /* PackagesInFreightView.swift */,
+				975193B82CF284A900384FF1 /* NewFreightView.swift */,
+			);
+			path = Freight;
+			sourceTree = "<group>";
+		};
+		9751938C2CF2731100384FF1 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				9751938D2CF2732300384FF1 /* PackageInfoView.swift */,
+			);
+			path = Package;
+			sourceTree = "<group>";
+		};
+		975193912CF2737900384FF1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				975193932CF273A700384FF1 /* PackageViewModel.swift */,
+				975193952CF273B300384FF1 /* FreightViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		975193A32CF2796B00384FF1 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				975193A42CF2798000384FF1 /* DescriptionItem.swift */,
+				975193A62CF27B8700384FF1 /* SearchBar.swift */,
+				975193AA2CF27C0500384FF1 /* InputField.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +362,9 @@
 				Base,
 			);
 			mainGroup = 4AF8F4E42CF1F3B5000549B9;
+			packageReferences = (
+				975193BD2CF29C6300384FF1 /* XCRemoteSwiftPackageReference "OpenAI" */,
+			);
 			productRefGroup = 4AF8F4EE2CF1F3B5000549B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -303,10 +407,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975193A92CF27BBF00384FF1 /* HideKeyBoard.swift in Sources */,
 				4AF8F4F32CF1F3B5000549B9 /* ContentView.swift in Sources */,
+				975193A22CF277F700384FF1 /* BaseListView.swift in Sources */,
+				975193982CF273F700384FF1 /* Persistence.swift in Sources */,
+				975193A52CF2798000384FF1 /* DescriptionItem.swift in Sources */,
 				4AF8F4F12CF1F3B5000549B9 /* ExpologHackApp.swift in Sources */,
+				975193942CF273A700384FF1 /* PackageViewModel.swift in Sources */,
 				4AF8F51E2CF1F441000549B9 /* Utils.swift in Sources */,
 				4AF8F5212CF1F453000549B9 /* Models.swift in Sources */,
+				975193D82CF2BE2C00384FF1 /* BusinessData.xcdatamodeld in Sources */,
+				9751938E2CF2732300384FF1 /* PackageInfoView.swift in Sources */,
+				975193B92CF284A900384FF1 /* NewFreightView.swift in Sources */,
+				975193AB2CF27C0500384FF1 /* InputField.swift in Sources */,
+				975193A72CF27B8700384FF1 /* SearchBar.swift in Sources */,
+				975193B72CF27FF900384FF1 /* PackagesInFreightView.swift in Sources */,
+				975193962CF273B300384FF1 /* FreightViewModel.swift in Sources */,
+				975193DD2CF2BFB000384FF1 /* Freight+CoreDataClass.swift in Sources */,
+				975193DE2CF2BFB000384FF1 /* Freight+CoreDataProperties.swift in Sources */,
+				975193DF2CF2BFB000384FF1 /* Package+CoreDataClass.swift in Sources */,
+				975193E02CF2BFB000384FF1 /* Package+CoreDataProperties.swift in Sources */,
+				9751938B2CF272F800384FF1 /* FreightListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +767,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		975193BD2CF29C6300384FF1 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		975193BE2CF29C6300384FF1 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 975193BD2CF29C6300384FF1 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		975193D62CF2BE2C00384FF1 /* BusinessData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				975193D72CF2BE2C00384FF1 /* BusinessData.xcdatamodel */,
+			);
+			currentVersion = 975193D72CF2BE2C00384FF1 /* BusinessData.xcdatamodel */;
+			path = BusinessData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4AF8F4E52CF1F3B5000549B9 /* Project object */;
 }
