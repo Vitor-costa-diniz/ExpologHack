@@ -26,6 +26,11 @@ struct VehicleSheet: View {
                 
                 VStack {
                     formVehicle
+                        .gesture(
+                            TapGesture().onEnded { _ in
+                                self.dismissKeyboard()
+                            }
+                        )
                         .sheet(isPresented: $showNameSheet, content: {
                             NameSheet(showSheet: $showNameSheet, name: $temporaryName)
                         })
@@ -113,7 +118,7 @@ struct VehicleSheet: View {
                             Text("0000000")
                                 .foregroundStyle(Color.secondary)
                         }
-                        .frame(width: 70)
+                        .frame(width: 74)
                         
                     case .loadCapacity:
                         HStack {
@@ -131,7 +136,7 @@ struct VehicleSheet: View {
                                 .foregroundStyle(Color.secondary)
                         }
                         .keyboardType(.decimalPad)
-                        .frame(width: viewModel.height.count == 0 ? 12 : CGFloat(viewModel.height.count) * 12)
+                        .frame(width: viewModel.height.count == 0 ? 10 : CGFloat(viewModel.height.count) * 10)
                         .padding(.trailing, -5)
                         Text("m")
                         
@@ -193,6 +198,12 @@ struct VehicleSheet: View {
                 viewModel.width.removeLast()
             }
         }
+    }
+}
+
+extension View {
+    func dismissKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
