@@ -27,7 +27,7 @@ struct CreateRouteSheet: View {
                     }
                     
                     TextField(text: $viewModel.selectLoad) {
-                        Text("Ponto de partida")
+                        Text("Carga a ser transportada")
                     }
                     .frame(minHeight: 50)
                     .padding(.horizontal, 16)
@@ -106,7 +106,7 @@ struct CreateRouteSheet: View {
                     
                     Button(action: {
                         if !viewModel.selectLoad.isEmpty && !viewModel.stopPoints.isEmpty && !viewModel.derparturePoint.isEmpty {
-                            
+                            viewModel.stopPoints.append(stopPoint)
                         }
                     }, label: {
                         Text("Iniciar Viagem")
