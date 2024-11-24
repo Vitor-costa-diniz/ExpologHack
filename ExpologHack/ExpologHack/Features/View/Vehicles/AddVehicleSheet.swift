@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct AddVehicleSheet: View {
+    @EnvironmentObject private var viewModel: VehicleViewModel
     @Environment(\.dismiss) private var dismiss
-    @State private var selectVehicleType: VehicleType = .truck
-    @State private var vehiclePlate: String = ""
-    @State private var height: String = ""
-    @State private var length: String = ""
-    @State private var width: String = ""
     
     var body: some View {
         NavigationStack {
@@ -66,14 +62,15 @@ struct AddVehicleSheet: View {
                 ListRow(title: result.rawValue) {
                     switch result {
                     case .vehicleType:
-                        Picker("", selection: $selectVehicleType) {
+                        Picker("", selection: $viewModel.selectVehicleType) {
                             Text(VehicleType.truck.rawValue).tag(VehicleType.truck)
                                 .foregroundStyle(Color.secondary)
                             Text(VehicleType.car.rawValue).tag(VehicleType.car)
                         }
+                        .tint(Color.gray)
                         
                     case .plate:
-                        TextField(text: $vehiclePlate) {
+                        TextField(text: $viewModel.vehiclePlate) {
                             Text("000000")
                                 .foregroundStyle(Color.secondary)
                         }
@@ -85,32 +82,32 @@ struct AddVehicleSheet: View {
                             .padding(.top, 2.4)
                         
                     case .height:
-                        TextField(text: $height) {
+                        TextField(text: $viewModel.height) {
                             Text("0")
                                 .foregroundStyle(Color.secondary)
                         }
                         .keyboardType(.decimalPad)
-                        .frame(width: height.count == 0 ? 9 : CGFloat(height.count) * 9)
+                        .frame(width: viewModel.height.count == 0 ? 9 : CGFloat(viewModel.height.count) * 9)
                         .padding(.trailing, -5)
                         Text("m")
                         
                     case .length:
-                        TextField(text: $length) {
+                        TextField(text: $viewModel.length) {
                             Text("0")
                                 .foregroundStyle(Color.secondary)
                         }
                         .keyboardType(.decimalPad)
-                        .frame(width: height.count == 0 ? 9 : CGFloat(height.count) * 9)
+                        .frame(width: viewModel.length.count == 0 ? 9 : CGFloat(viewModel.length.count) * 9)
                         .padding(.trailing, -5)
                         Text("m")
                         
                     case .width:
-                        TextField(text: $width) {
+                        TextField(text: $viewModel.width) {
                             Text("0")
                                 .foregroundStyle(Color.secondary)
                         }
                         .keyboardType(.decimalPad)
-                        .frame(width: height.count == 0 ? 9 : CGFloat(height.count) * 9)
+                        .frame(width: viewModel.width.count == 0 ? 9 : CGFloat(viewModel.width.count) * 9)
                         .padding(.trailing, -5)
                         Text("m")
                     }
@@ -132,24 +129,24 @@ struct AddVehicleSheet: View {
         .scrollDisabled(true)
         .listStyle(DefaultListStyle())
         .scrollContentBackground(.hidden)
-        .onChange(of: vehiclePlate) { value in
-            if vehiclePlate.count > 6 {
-                vehiclePlate.removeLast()
+        .onChange(of: viewModel.vehiclePlate) { value in
+            if viewModel.vehiclePlate.count > 6 {
+                viewModel.vehiclePlate.removeLast()
             }
         }
-        .onChange(of: height) { value in
-            if height.count > 6 {
-                height.removeLast()
+        .onChange(of: viewModel.height) { value in
+            if viewModel.height.count > 6 {
+                viewModel.height.removeLast()
             }
         }
-        .onChange(of: length) { value in
-            if length.count > 6 {
-                length.removeLast()
+        .onChange(of: viewModel.length) { value in
+            if viewModel.length.count > 6 {
+                viewModel.length.removeLast()
             }
         }
-        .onChange(of: width) { value in
-            if width.count > 6 {
-                width.removeLast()
+        .onChange(of: viewModel.width) { value in
+            if viewModel.width.count > 6 {
+                viewModel.width.removeLast()
             }
         }
     }
@@ -157,4 +154,5 @@ struct AddVehicleSheet: View {
 
 #Preview {
     AddVehicleSheet()
+        .environmentObject(VehicleViewModel())
 }

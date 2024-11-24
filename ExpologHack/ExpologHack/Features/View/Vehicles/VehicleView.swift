@@ -9,6 +9,7 @@ import SwiftUI
 
 struct VehicleView: View {
     @ObservedObject var viewModel: VehicleViewModel
+    @State private var showSheet: Bool = false
     
     var body: some View {
         ZStack {
@@ -27,7 +28,7 @@ struct VehicleView: View {
                     .padding(.bottom, 32)
                     .font(.custom(TokenFont.medium.rawValue, size: 16))
                 
-                Button(action: {}) {
+                Button(action: { showSheet.toggle() }) {
                     Text("Cadastrar veículo")
                         .font(.custom(TokenFont.semibold.rawValue, size: 14))
                         .foregroundStyle(.white)
@@ -40,6 +41,10 @@ struct VehicleView: View {
                 }
             }
             .padding(.horizontal, 24)
+            .sheet(isPresented: $showSheet, content: {
+                AddVehicleSheet()
+                    .environmentObject(viewModel)
+            })
             
         }
     }

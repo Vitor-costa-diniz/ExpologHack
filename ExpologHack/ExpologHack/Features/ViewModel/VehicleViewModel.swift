@@ -11,6 +11,11 @@ import CoreData
 class VehicleViewModel: ObservableObject {
     let viewContext = PersistenceController.shared.container.viewContext
     @Published var vehicles: [Vehicle] = []
+    @Published var selectVehicleType: VehicleType = .truck
+    @Published var vehiclePlate: String = ""
+    @Published var height: String = ""
+    @Published var length: String = ""
+    @Published var width: String = ""
     
     init() {
         self.fetch()
@@ -24,24 +29,29 @@ class VehicleViewModel: ObservableObject {
         vehicles = fetchedContacts
     }
     
-    func createVehicle(vehicle: [String]){
-        var items: [Vehicle] = []
+    func createVehicle() {
+        let newContact = Vehicle(context: viewContext)
+        newContact.name = ""
+        newContact.id = UUID().description
+        newContact.plate = vehiclePlate
+        newContact.type = "Fiat Uno"
+        newContact.loadCapacity = "100T"
         
-        vehicle.forEach { item in
-            let newContact = Vehicle(context: viewContext)
-            newContact.name = item
-            newContact.id = UUID().description
-            newContact.plate = "BRA2010"
-            newContact.type = "Fiat Uno"
-            newContact.loadCapacity = "100T"
-            
-            items.append(newContact)
-            do {
-                try viewContext.save()
-            } catch let error as NSError {
-                print("could not save \(error) \(error.userInfo)")
-            }
+        do {
+            try viewContext.save()
+        } catch let error as NSError {
+            print("could not save \(error) \(error.userInfo)")
         }
+        
         self.fetch()
+        resetData()
+    }
+    
+    private func resetData() {
+        selectVehicleType = .truck
+        vehiclePlate = ""
+        height = ""
+        length = ""
+        width = ""
     }
 }
