@@ -10,6 +10,8 @@ import SwiftUI
 struct AddVehicleSheet: View {
     @EnvironmentObject private var viewModel: VehicleViewModel
     @Environment(\.dismiss) private var dismiss
+    @State private var showNameSheet: Bool = false
+    @State private var temporaryName: String?
     
     var body: some View {
         NavigationStack {
@@ -19,7 +21,9 @@ struct AddVehicleSheet: View {
                 
                 VStack {
                     formVehicle
-                    
+                        .sheet(isPresented: $showNameSheet, content: {
+                            NameSheet(showSheet: $showNameSheet, name: $temporaryName)
+                        })
                         .toolbar {
                             ToolbarItem(placement: ToolbarItemPlacement.navigationBarLeading) {
                                 Button("Cancelar") {
@@ -31,6 +35,7 @@ struct AddVehicleSheet: View {
                             
                             ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
                                 Button("Adicionar") {
+                                    viewModel.name = temporaryName
                                     dismiss()
                                 }
                                 .font(.custom(TokenFont.bold.rawValue, size: 16))
@@ -55,7 +60,7 @@ struct AddVehicleSheet: View {
                 Image(.arrowRightBold)
                     .padding(.top, 2.4)
             } action: {
-                
+                showNameSheet.toggle()
             }
             
             ForEach(VehicleComponentTitle.allCases, id: \.self) { result in

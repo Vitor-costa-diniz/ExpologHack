@@ -11,6 +11,7 @@ import CoreData
 class VehicleViewModel: ObservableObject {
     let viewContext = PersistenceController.shared.container.viewContext
     @Published var vehicles: [Vehicle] = []
+    @Published var name: String?
     @Published var selectVehicleType: VehicleType = .truck
     @Published var vehiclePlate: String = ""
     @Published var height: String = ""
@@ -53,5 +54,6 @@ class VehicleViewModel: ObservableObject {
         height = ""
         length = ""
         width = ""
+        name = ""
     }
 }
