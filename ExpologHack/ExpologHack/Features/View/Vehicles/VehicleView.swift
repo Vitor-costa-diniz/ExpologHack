@@ -10,6 +10,7 @@ import SwiftUI
 struct VehicleView: View {
     @ObservedObject var viewModel: VehicleViewModel
     @State private var showSheet: Bool = false
+    @State private var showEditSheet: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -77,12 +78,16 @@ struct VehicleView: View {
                 }
                 .padding(.horizontal, 24)
                 .sheet(isPresented: $showSheet, content: {
-                    AddVehicleSheet()
+                    VehicleSheet(isAdd: true)
+                        .environmentObject(viewModel)
+                })
+                .sheet(isPresented: $showEditSheet, content: {
+                    VehicleSheet(isAdd: false)
                         .environmentObject(viewModel)
                 })
                 .toolbar {
                     ToolbarItem(placement: .confirmationAction) {
-                        Button(action: {}, label: {
+                        Button(action: { showEditSheet.toggle() }, label: {
                             if !viewModel.vehicles.isEmpty {
                                 Text("Editar")
                                     .foregroundStyle(Color.primary200)

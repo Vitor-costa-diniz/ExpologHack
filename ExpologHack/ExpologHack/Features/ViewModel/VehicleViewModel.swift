@@ -54,6 +54,28 @@ class VehicleViewModel: ObservableObject {
         resetData()
     }
     
+    func updateVehicle() {
+        let vehicle = getVehicle()
+        
+        vehicle.name = name ?? "Paulo"
+        vehicle.type = selectVehicleType.rawValue
+        vehicle.plate = vehiclePlate
+        vehicle.loadCapacity = capacity ?? "0T"
+        vehicle.height = height
+        vehicle.length = length
+        vehicle.width = width
+        vehicle.specs = specs
+        
+        do {
+            try viewContext.save()
+        } catch let error as NSError {
+            print("could not save \(error) \(error.userInfo)")
+        }
+        
+        self.fetch()
+        resetData()
+    }
+    
     func arePropertiesValid() -> Bool {
         let stringsToValidate = [vehiclePlate, height, length, width]
         return stringsToValidate.allSatisfy { !$0.isEmpty }
@@ -78,6 +100,20 @@ class VehicleViewModel: ObservableObject {
         }
     }
     
+    func loadFirstVehicle() {
+        guard let firstVehicle = vehicles.first else { return }
+        self.name = firstVehicle.name
+        self.capacity = firstVehicle.loadCapacity
+        self.specs = firstVehicle.specs
+        self.selectVehicleType = firstVehicle.type == "Carro" ? .car : .truck
+        self.vehiclePlate = firstVehicle.plate ?? ""
+        self.height = firstVehicle.height ?? ""
+        self.length = firstVehicle.length ?? ""
+        self.width = firstVehicle.width ?? ""
+    }
+}
+
+extension VehicleViewModel {
     private func resetData() {
         selectVehicleType = .truck
         vehiclePlate = ""
@@ -87,5 +123,14 @@ class VehicleViewModel: ObservableObject {
         name = nil
         capacity = nil
         specs = nil
+    }
+    
+    private func getVehicle() -> Vehicle {
+        let fetchRequest: NSFetchRequest<Vehicle> = Vehicle.fetchRequest()
+        guard let fetchedContacts = try? viewContext.fetch(fetchRequest) else {
+            return .init()
+        }
+        
+        return fetchedContacts.first!
     }
 }

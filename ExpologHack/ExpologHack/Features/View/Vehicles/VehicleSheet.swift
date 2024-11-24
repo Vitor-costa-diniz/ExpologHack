@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddVehicleSheet: View {
+struct VehicleSheet: View {
     @EnvironmentObject private var viewModel: VehicleViewModel
     @Environment(\.dismiss) private var dismiss
     @State private var showNameSheet: Bool = false
@@ -16,6 +16,7 @@ struct AddVehicleSheet: View {
     @State private var temporaryName: String?
     @State private var temporaryCapacity: String?
     @State private var temporarySpecs: String?
+    var isAdd: Bool
     
     var body: some View {
         NavigationStack {
@@ -44,12 +45,16 @@ struct AddVehicleSheet: View {
                             }
                             
                             ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
-                                Button("Adicionar") {
+                                Button(isAdd ? "Adicionar" : "Salvar") {
                                     if viewModel.arePropertiesValid() && temporaryName != nil {
                                         viewModel.name = temporaryName
                                         viewModel.capacity = temporaryCapacity
                                         viewModel.specs = temporarySpecs
-                                        viewModel.createVehicle()
+                                        if isAdd {
+                                            viewModel.createVehicle()
+                                        } else {
+                                            viewModel.updateVehicle()
+                                        }
                                         dismiss()
                                     }
                                 }
@@ -63,6 +68,9 @@ struct AddVehicleSheet: View {
                         .toolbarBackground(.visible, for: .navigationBar)
                         .navigationBarTitle("Adicionar veículo", displayMode: .inline)
                         .onAppear {
+                            if !isAdd {
+                                viewModel.loadFirstVehicle()
+                            }
                             temporaryName = viewModel.name
                             temporaryCapacity = viewModel.capacity
                             temporarySpecs = viewModel.specs
@@ -152,7 +160,7 @@ struct AddVehicleSheet: View {
                 .foregroundStyle(Color.secondary)
             }
             
-            ActionListRow(title: "Especificidades") {
+            ActionListRow(title: "Descrição") {
                 Text("\(temporarySpecs ?? "Nenhuma")")
                     .foregroundStyle(Color.secondary)
                     .font(.custom(TokenFont.regular.rawValue, size: 16))
@@ -189,6 +197,6 @@ struct AddVehicleSheet: View {
 }
 
 #Preview {
-    AddVehicleSheet()
+    VehicleSheet(isAdd: true)
         .environmentObject(VehicleViewModel())
 }
