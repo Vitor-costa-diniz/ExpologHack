@@ -15,3 +15,9 @@ enum VehicleComponentTitle: String, CaseIterable {
     case length = "Comprimento"
     case width = "Largura"
 }
+
+enum VehicleType: String, CaseIterable, Identifiable {
+    case truck = "Caminhão"
+    case car = "Carro"
+    var id: Self { self }
+}

@@ -9,6 +9,11 @@ import SwiftUI
 
 struct AddVehicleSheet: View {
     @Environment(\.dismiss) private var dismiss
+    @State private var selectVehicleType: VehicleType = .truck
+    @State private var vehiclePlate: String = ""
+    @State private var height: String = ""
+    @State private var length: String = ""
+    @State private var width: String = ""
     
     var body: some View {
         NavigationStack {
@@ -32,23 +37,59 @@ struct AddVehicleSheet: View {
                             ListRow(title: result.rawValue) {
                                 switch result {
                                 case .vehicleType:
-                                    Text("Inserir")
+                                    Picker("", selection: $selectVehicleType) {
+                                        Text(VehicleType.truck.rawValue).tag(VehicleType.truck)
+                                            .foregroundStyle(Color.secondary)
+                                        Text(VehicleType.car.rawValue).tag(VehicleType.car)
+                                    }
                                 case .plate:
-                                    Text("Teste")
+                                    TextField(text: $vehiclePlate) {
+                                        Text("000000")
+                                            .foregroundStyle(Color.secondary)
+                                    }
+                                    .frame(width: 60)
                                 case .loadCapacity:
                                     Text("Inserir")
                                     Image(.arrowRightBold)
                                         .padding(.top, 2.4)
                                 case .height:
-                                    Text("0m")
+                                    TextField(text: $height) {
+                                        Text("0")
+                                            .foregroundStyle(Color.secondary)
+                                    }
+                                    .keyboardType(.decimalPad)
+                                    .frame(width: height.count == 0 ? 9 : CGFloat(height.count) * 9)
+                                    .padding(.trailing, -5)
+                                    Text("m")
+                                    
                                 case .length:
-                                    Text("0m")
+                                    TextField(text: $length) {
+                                        Text("0")
+                                            .foregroundStyle(Color.secondary)
+                                    }
+                                    .keyboardType(.decimalPad)
+                                    .frame(width: height.count == 0 ? 9 : CGFloat(height.count) * 9)
+                                    .padding(.trailing, -5)
+                                    Text("m")
+                                    
                                 case .width:
-                                    Text("0m")
+                                    TextField(text: $width) {
+                                        Text("0")
+                                            .foregroundStyle(Color.secondary)
+                                    }
+                                    .keyboardType(.decimalPad)
+                                    .frame(width: height.count == 0 ? 9 : CGFloat(height.count) * 9)
+                                    .padding(.trailing, -5)
+                                    Text("m")
                                 }
                             }
                             .font(.custom(TokenFont.regular.rawValue, size: 16))
                             .foregroundStyle(Color.secondary)
+                        }
+                        .onChange(of: vehiclePlate) { value in
+                            if vehiclePlate.count > 6 {
+                                vehiclePlate.removeLast()
+                            }
                         }
                         
                         ActionListRow(title: "Especificidades") {
@@ -63,7 +104,6 @@ struct AddVehicleSheet: View {
                     }
                     .scrollDisabled(true)
                     .listStyle(DefaultListStyle())
-
                     .scrollContentBackground(.hidden)
                     
                     .toolbar {
