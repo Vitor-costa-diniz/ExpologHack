@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import CoreData
 
 class VehicleViewModel: ObservableObject {
@@ -110,6 +111,10 @@ class VehicleViewModel: ObservableObject {
         self.height = firstVehicle.height ?? ""
         self.length = firstVehicle.length ?? ""
         self.width = firstVehicle.width ?? ""
+    }
+    
+    func resignFirstResponder() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 

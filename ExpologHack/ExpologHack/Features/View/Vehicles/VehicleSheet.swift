@@ -110,10 +110,10 @@ struct VehicleSheet: View {
                         
                     case .plate:
                         TextField(text: $viewModel.vehiclePlate) {
-                            Text("000000")
+                            Text("0000000")
                                 .foregroundStyle(Color.secondary)
                         }
-                        .frame(width: 60)
+                        .frame(width: 70)
                         
                     case .loadCapacity:
                         HStack {
@@ -131,7 +131,7 @@ struct VehicleSheet: View {
                                 .foregroundStyle(Color.secondary)
                         }
                         .keyboardType(.decimalPad)
-                        .frame(width: viewModel.height.count == 0 ? 9 : CGFloat(viewModel.height.count) * 9)
+                        .frame(width: viewModel.height.count == 0 ? 12 : CGFloat(viewModel.height.count) * 12)
                         .padding(.trailing, -5)
                         Text("m")
                         
@@ -151,7 +151,7 @@ struct VehicleSheet: View {
                                 .foregroundStyle(Color.secondary)
                         }
                         .keyboardType(.decimalPad)
-                        .frame(width: viewModel.width.count == 0 ? 9 : CGFloat(viewModel.width.count) * 9)
+                        .frame(width: viewModel.width.count == 0 ? 10 : CGFloat(viewModel.width.count) * 10)
                         .padding(.trailing, -5)
                         Text("m")
                     }
@@ -174,7 +174,7 @@ struct VehicleSheet: View {
         .listStyle(DefaultListStyle())
         .scrollContentBackground(.hidden)
         .onChange(of: viewModel.vehiclePlate) { value in
-            if viewModel.vehiclePlate.count > 6 {
+            if viewModel.vehiclePlate.count > 7 {
                 viewModel.vehiclePlate.removeLast()
             }
         }
