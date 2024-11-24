@@ -9,7 +9,6 @@ import SwiftUI
 
 struct BaseListView: View {
     @State private var selectedIndex = 0
-
     @ObservedObject var packageViewModel: PackageViewModel
     @ObservedObject var freightViewModel: FreightViewModel
     
@@ -22,13 +21,28 @@ struct BaseListView: View {
     let tabBarImage = ["person.fill", "person.2.fill"]
     
     var body: some View {
-        VStack {
+        TabView(selection: $selectedIndex) {
             FreightListView(freightViewModel: freightViewModel, packageViewModel: packageViewModel)
-            Spacer()
+                .onAppear {
+                    freightViewModel.fetch()
+                }
+                .tabItem {
+                    Label(
+                        title: { Text("Home") },
+                        icon: { Image(systemName: "star.fill") }
+                    )
+                }
+                .tag(0)
+            
+            
+            Text("Teste")
+                .tabItem {
+                    Label(
+                        title: { Text("Home") },
+                        icon: { Image(systemName: "star.fill") }
+                    )
+                }
+                .tag(1)
         }
-        .onAppear {
-            freightViewModel.fetch()
-        }
-        .ignoresSafeArea(.keyboard, edges: .bottom)
     }
 }
