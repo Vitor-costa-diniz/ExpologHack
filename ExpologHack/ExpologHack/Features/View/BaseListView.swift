@@ -26,23 +26,23 @@ struct BaseListView: View {
                 .onAppear {
                     freightViewModel.fetch()
                 }
+                .tag(0)
                 .tabItem {
                     Label(
                         title: { Text("Home") },
                         icon: { Image(systemName: "star.fill") }
                     )
                 }
-                .tag(0)
             
             
             Text("Teste")
+                .tag(1)
                 .tabItem {
                     Label(
                         title: { Text("Home") },
                         icon: { Image(systemName: "star.fill") }
                     )
                 }
-                .tag(1)
         }
     }
 }
