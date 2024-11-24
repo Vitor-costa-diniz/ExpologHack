@@ -59,6 +59,25 @@ class VehicleViewModel: ObservableObject {
         return stringsToValidate.allSatisfy { !$0.isEmpty }
     }
     
+    func getVehicleInfo(for component: VehicleComponentTitle) -> String {
+        let vehicle = vehicles.first!
+        
+        switch component {
+        case .vehicleType:
+            return vehicle.type ?? "N/A"
+        case .plate:
+            return vehicle.plate ?? "N/A"
+        case .loadCapacity:
+            return vehicle.loadCapacity ?? "N/A"
+        case .height:
+            return vehicle.height ?? "N/A"
+        case .length:
+            return vehicle.length ?? "N/A"
+        case .width:
+            return vehicle.width ?? "N/A"
+        }
+    }
+    
     private func resetData() {
         selectVehicleType = .truck
         vehiclePlate = ""

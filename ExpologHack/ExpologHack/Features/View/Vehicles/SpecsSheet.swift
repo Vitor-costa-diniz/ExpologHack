@@ -20,15 +20,21 @@ struct SpecsSheet: View {
                 
                 VStack {
                     RoundedRectangle(cornerRadius: 12)
-                        .frame(height: 50)
+                        .frame(height: 200)
                         .foregroundStyle(.surfContainer)
                         .overlay {
-                            TextField("Especificidades", text: $specsMock)
-                            .keyboardType(.alphabet)
-                            .padding(.leading)
+                            ZStack(alignment: .topLeading) {
+                                Text("Especificidades")
+                                    .offset(x: 16.0, y: 10.0)
+                                    .foregroundStyle(Color.secondary)
+                                    .opacity(specsMock != "" ? 0 : 1)
+                                TextEditor(text: $specsMock)
+                                    .scrollContentBackground(.hidden)
+                                    .padding(.leading, 12)
+                            }
                         }
-                        .padding(.top, 16)
                         .padding(.horizontal, 16)
+                        .padding(.top, 16)
                     Spacer()
                 }
             }
