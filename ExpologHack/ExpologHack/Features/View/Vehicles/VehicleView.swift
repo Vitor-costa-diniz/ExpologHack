@@ -43,37 +43,45 @@ struct VehicleView: View {
                                 }
                         }
                     } else {
-                        VStack(alignment: .leading, spacing: 0) {
-                            Text(viewModel.vehicles.first?.name ?? "Vitor")
-                                .font(.custom(TokenFont.semibold.rawValue, size: 28))
-                                .padding(.bottom, 24)
-                                .foregroundStyle(Color.neutralN50)
-                            
-                            ForEach(VehicleComponentTitle.allCases, id: \.self) { result in
-                                HStack {
-                                    Text(result.rawValue)
+                        Rectangle()
+                            .foregroundStyle(.cardBackground)
+                            .clipShape(.rect(cornerRadius: 16))
+                            .overlay {
+                                VStack(alignment: .leading, spacing: 0) {
+                                    Text(viewModel.vehicles.first?.name ?? "Vitor")
+                                        .font(.custom(TokenFont.semibold.rawValue, size: 28))
+                                        .padding(.bottom, 24)
                                         .foregroundStyle(Color.neutralN50)
+                                    
+                                    ForEach(VehicleComponentTitle.allCases, id: \.self) { result in
+                                        HStack {
+                                            Text(result.rawValue)
+                                                .foregroundStyle(Color.neutralN50)
+                                            Spacer()
+                                            Text(viewModel.getVehicleInfo(for: result))
+                                                .foregroundStyle(Color.neutralN50)
+                                        }
+                                        .padding(.bottom, 16)
+                                        .font(.custom(TokenFont.regular.rawValue, size: 16))
+                                    }
+                                    
+                                    Text("Especificidades")
+                                        .font(.custom(TokenFont.semibold.rawValue, size: 20))
+                                        .foregroundStyle(Color.neutralN50)
+                                        .padding(.top, 24)
+                                        .padding(.bottom, 8)
+                                    
+                                    Text(viewModel.vehicles.first?.specs ?? "Nada a declarar sobre o caminhão")
+                                        .foregroundStyle(Color.neutralN50)
+                                        .multilineTextAlignment(.leading)
+                                    
                                     Spacer()
-                                    Text(viewModel.getVehicleInfo(for: result))
-                                        .foregroundStyle(Color.neutralN50)
                                 }
-                                .padding(.bottom, 16)
-                                .font(.custom(TokenFont.regular.rawValue, size: 16))
+                                .padding(16)
                             }
-                            
-                            Text("Especificidades")
-                                .font(.custom(TokenFont.semibold.rawValue, size: 20))
-                                .foregroundStyle(Color.neutralN50)
-                                .padding(.top, 24)
-                                .padding(.bottom, 8)
-                            
-                            Text(viewModel.vehicles.first?.specs ?? "Nada a declarar sobre o caminhão")
-                                .foregroundStyle(Color.neutralN50)
-                                .multilineTextAlignment(.leading)
-                            
-                            Spacer()
-                        }
-                        .padding(.top, 32)
+                            .frame(height: 435)
+                            .padding(.top, 24)
+                        Spacer()
                     }
                 }
                 .padding(.horizontal, 24)

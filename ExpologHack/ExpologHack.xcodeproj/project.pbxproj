@@ -23,6 +23,7 @@
 		4A64E10A2CF2E9FB0089D604 /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E1092CF2E9FB0089D604 /* ListRow.swift */; };
 		4A64E10D2CF2EACD0089D604 /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E10C2CF2EACD0089D604 /* VehicleModel.swift */; };
 		4A64E10F2CF2F1800089D604 /* ActionListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E10E2CF2F17F0089D604 /* ActionListRow.swift */; };
+		4A835EE52CF350F600FBFE5C /* ShowResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A835EE42CF350F600FBFE5C /* ShowResult.swift */; };
 		4AAF26CC2CF2FBCF00101F30 /* NameSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF26CB2CF2FBCF00101F30 /* NameSheet.swift */; };
 		4AAF26CE2CF2FDD000101F30 /* AddLoadCapacitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF26CD2CF2FDD000101F30 /* AddLoadCapacitySheet.swift */; };
 		4AAF26D02CF3018B00101F30 /* SpecsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF26CF2CF3018B00101F30 /* SpecsSheet.swift */; };
@@ -88,6 +89,7 @@
 		4A64E1092CF2E9FB0089D604 /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		4A64E10C2CF2EACD0089D604 /* VehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
 		4A64E10E2CF2F17F0089D604 /* ActionListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionListRow.swift; sourceTree = "<group>"; };
+		4A835EE42CF350F600FBFE5C /* ShowResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowResult.swift; sourceTree = "<group>"; };
 		4AAF26CB2CF2FBCF00101F30 /* NameSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSheet.swift; sourceTree = "<group>"; };
 		4AAF26CD2CF2FDD000101F30 /* AddLoadCapacitySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoadCapacitySheet.swift; sourceTree = "<group>"; };
 		4AAF26CF2CF3018B00101F30 /* SpecsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecsSheet.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				975193B82CF284A900384FF1 /* NewFreightView.swift */,
 				4AAF26D12CF31D0600101F30 /* FinishRouteView.swift */,
 				4AAF26D32CF3242E00101F30 /* RouteCard.swift */,
+				4A835EE42CF350F600FBFE5C /* ShowResult.swift */,
 			);
 			path = Freight;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				975193DD2CF2BFB000384FF1 /* Freight+CoreDataClass.swift in Sources */,
 				975193DE2CF2BFB000384FF1 /* Freight+CoreDataProperties.swift in Sources */,
 				4A64E10A2CF2E9FB0089D604 /* ListRow.swift in Sources */,
+				4A835EE52CF350F600FBFE5C /* ShowResult.swift in Sources */,
 				4AAF26D42CF3242E00101F30 /* RouteCard.swift in Sources */,
 				975193DF2CF2BFB000384FF1 /* Package+CoreDataClass.swift in Sources */,
 				975193E02CF2BFB000384FF1 /* Package+CoreDataProperties.swift in Sources */,

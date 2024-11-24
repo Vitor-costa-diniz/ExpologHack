@@ -12,6 +12,7 @@ struct FreightListView: View {
     let hasVehicle: Bool
     @ObservedObject var freightViewModel: FreightViewModel
     @ObservedObject var packageViewModel: PackageViewModel
+    @State private var showResult: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -21,8 +22,7 @@ struct FreightListView: View {
                 
                 VStack {
                     if hasVehicle {
-                        
-                        if freightViewModel.freight.isEmpty {
+                        if !freightViewModel.freight.isEmpty {
                             emptyRoutes
                         } else {
                             listRoutes
@@ -33,7 +33,10 @@ struct FreightListView: View {
                     }
                 }
             }
-            .navigationTitle(freightViewModel.freight.isEmpty ? "" : "Minhas Viagens")
+            .navigationTitle(!freightViewModel.freight.isEmpty ? "" : "Minhas Viagens")
+            .navigationDestination(isPresented: $showResult) {
+                ShowResult()
+            }
         }
     }
     
@@ -42,6 +45,9 @@ struct FreightListView: View {
             ScrollView {
                 ForEach(0 ..< 2, id: \.self) { _ in
                     RouteCard()
+                        .onTapGesture {
+                            showResult.toggle()
+                        }
                         .padding(.bottom, 8)
                 }
                 .padding(.top, 18)
