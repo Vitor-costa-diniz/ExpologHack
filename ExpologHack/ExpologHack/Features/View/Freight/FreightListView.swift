@@ -39,8 +39,12 @@ struct FreightListView: View {
     
     private var listRoutes: some View {
         VStack {
-            ForEach(freightViewModel.freight, id: \.self) {
-                Text($0.cost!)
+            ScrollView {
+                ForEach(0 ..< 2, id: \.self) { _ in
+                    RouteCard()
+                        .padding(.bottom, 8)
+                }
+                .padding(.top, 18)
             }
             
             Spacer()

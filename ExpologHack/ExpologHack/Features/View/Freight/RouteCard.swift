@@ -12,57 +12,61 @@ struct RouteCard: View {
         GeometryReader { geo in
             let screenProportion = geo.size.width / geo.size.height
             
-            VStack {
-                HStack(alignment: .top) {
-                    Image(.miniTruck)
-                        .background(
-                            Circle()
-                                .frame(width: 52, height: 52)
-                                .foregroundStyle(Color.primary200)
-                        )
-                        .padding(.leading, 8)
-                        .padding(.trailing, 16)
-                        .padding(.top, 7)
-                    
-                    VStack(alignment: .leading) {
-                        Text("Duração: 1d 22hrs")
-                            .font(.custom(TokenFont.medium.rawValue, size: 14))
+            ZStack {
+                Image(.arrowRightThin)
+                    .offset(x: 174, y: 5)
+                VStack {
+                    HStack(alignment: .top) {
+                        Image(.miniTruck)
+                            .background(
+                                Circle()
+                                    .frame(width: 52, height: 52)
+                                    .foregroundStyle(Color.primary200)
+                            )
+                            .padding(.leading, 8)
+                            .padding(.trailing, 16)
+                            .padding(.top, 7)
                         
-                        Text("Frete #38422")
-                            .font(.custom(TokenFont.medium.rawValue, size: 20))
-                            .monospacedDigit()
+                        VStack(alignment: .leading) {
+                            Text("Duração: 1d 22hrs")
+                                .font(.custom(TokenFont.medium.rawValue, size: 14))
+                            
+                            Text("Frete #38422")
+                                .font(.custom(TokenFont.medium.rawValue, size: 20))
+                                .monospacedDigit()
+                        }
+                        
+                        Spacer()
+                        
+                        Text("2932km")
+                            .font(.custom(TokenFont.semibold.rawValue, size: 14))
+                            .frame(width: 60, height: 20)
+                            .padding(.horizontal, 5)
+                            .background(
+                                Rectangle()
+                                    .foregroundStyle(Color.primary200)
+                                    .clipShape(.rect(cornerRadius: 28))
+                            )
                     }
                     
-                    Spacer()
+                    trainProgress
+                        .frame(height: geo.size.height < 121 ? 20 : 30)
                     
-                    Text("2932km")
-                        .font(.custom(TokenFont.semibold.rawValue, size: 14))
-                        .frame(width: 60, height: 20)
-                        .padding(.horizontal, 5)
-                        .background(
-                            Rectangle()
-                                .foregroundStyle(Color.primary200)
-                                .clipShape(.rect(cornerRadius: 28))
-                        )
-                        .padding(.trailing, 12)
+                    HStack {
+                        Text("Partida: Fortaleza, CE")
+                        
+                        Spacer()
+                        
+                        Text("Chegada: São Paulo, SP")
+                    }
+                    .font(.custom(TokenFont.regular.rawValue, size: 12))
                 }
-                
-                trainProgress
-                    .frame(height: geo.size.height < 121 ? 20 : 30)
-                
-                HStack {
-                    Text("Partida: Fortaleza, CE")
-                    
-                    Spacer()
-                    
-                    Text("Chegada: São Paulo, SP")
-                }
-                .font(.custom(TokenFont.regular.rawValue, size: 12))
+                .padding(.top, geo.size.height < 121 ? 6 : screenProportion * 7.4)
             }
-            .padding(.top, geo.size.height < 121 ? 6 : screenProportion * 7.4)
         }
         .padding(.horizontal, 16)
-        .frame(maxWidth: 335)
+        .padding(.trailing, 14)
+        .frame(maxWidth: 361)
         .frame(height: 140)
         .background(
             Color.cardBackground
@@ -80,7 +84,7 @@ struct RouteCard: View {
             Line()
                 .stroke(lineWidth: 4)
                 .foregroundStyle(Color.primary200)
-                .frame(width: 286, height: 1)
+                .frame(width: 313, height: 1)
             
             HStack {
                 Circle()
