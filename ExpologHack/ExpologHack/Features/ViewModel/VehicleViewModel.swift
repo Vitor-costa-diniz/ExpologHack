@@ -10,17 +10,21 @@ import CoreData
 
 class VehicleViewModel: ObservableObject {
     let viewContext = PersistenceController.shared.container.viewContext
-    @Published var vehicle: [Vehicle] = []
+    @Published var vehicles: [Vehicle] = []
+    
+    init() {
+        self.fetch()
+    }
     
     func fetch() {
         let fetchRequest: NSFetchRequest<Vehicle> = Vehicle.fetchRequest()
         guard let fetchedContacts = try? viewContext.fetch(fetchRequest) else {
             return
         }
-        vehicle = fetchedContacts
+        vehicles = fetchedContacts
     }
     
-    func createPackage(vehicle: [String]) -> [Vehicle] {
+    func createVehicle(vehicle: [String]){
         var items: [Vehicle] = []
         
         vehicle.forEach { item in
@@ -38,7 +42,6 @@ class VehicleViewModel: ObservableObject {
                 print("could not save \(error) \(error.userInfo)")
             }
         }
-        
-        return items
+        self.fetch()
     }
 }

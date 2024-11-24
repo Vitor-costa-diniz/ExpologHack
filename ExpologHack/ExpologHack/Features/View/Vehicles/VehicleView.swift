@@ -8,15 +8,47 @@
 import SwiftUI
 
 struct VehicleView: View {
+    @ObservedObject var viewModel: VehicleViewModel
+    
     var body: some View {
         VStack {
             HStack {
                 Text("Veículo")
                 Spacer()
-                Button(action: {}, label: {
-                    Image(systemName: "plus")
-                })
+                if viewModel.vehicles.isEmpty {
+                    Button(action: { viewModel.createVehicle(vehicle: ["Palhio"])}, label: {
+                        Image(systemName: "plus")
+                    })
+                }
             }
+            .padding(.horizontal, 16)
+            
+            VStack {
+                if !$viewModel.vehicles.isEmpty {
+                    List {
+                        ForEach(viewModel.vehicles) { item in
+                            Section {
+                                Text(item.name!)
+                                Text(item.loadCapacity!)
+                                Text(item.plate!)
+                                Text(item.type!)
+                            }
+                        }
+                    }
+                } else {
+                    HStack {
+                        VStack(alignment: .center) {
+                            Spacer()
+                            Text("Adicione um novo Frete clicando em +")
+                                .fontWeight(.regular)
+                                .font(.system(size: 15))
+                            Spacer()
+                        }
+                    }
+                    
+                }
+            }
+            
             .padding(.horizontal)
             
             Spacer()
@@ -34,5 +66,5 @@ struct VehicleView: View {
 }
 
 #Preview {
-    VehicleView()
+    VehicleView(viewModel: .init())
 }

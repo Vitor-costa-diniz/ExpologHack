@@ -11,14 +11,14 @@ struct BaseListView: View {
     @State private var selectedIndex = 0
     @ObservedObject var packageViewModel: PackageViewModel
     @ObservedObject var freightViewModel: FreightViewModel
+    @ObservedObject var vehicleViewModel: VehicleViewModel
     
-    init(packageViewModel: PackageViewModel, freightViewModel: FreightViewModel) {
+    init(packageViewModel: PackageViewModel, freightViewModel: FreightViewModel, vehicleViewModel: VehicleViewModel) {
         self.packageViewModel = packageViewModel
         self.freightViewModel = freightViewModel
+        self.vehicleViewModel = vehicleViewModel
         UITabBar.appearance().barTintColor = .systemBackground
     }
-    
-    let tabBarImage = ["person.fill", "person.2.fill"]
     
     var body: some View {
         TabView(selection: $selectedIndex) {
@@ -35,7 +35,7 @@ struct BaseListView: View {
                 }
             
             
-            Text("Teste")
+            VehicleView(viewModel: vehicleViewModel)
                 .tag(1)
                 .tabItem {
                     Label(
