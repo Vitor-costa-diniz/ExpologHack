@@ -186,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				4AF8F4F02CF1F3B5000549B9 /* ExpologHackApp.swift */,
+				975193A12CF277F700384FF1 /* BaseListView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -234,7 +235,6 @@
 				975193A32CF2796B00384FF1 /* Component */,
 				9751938C2CF2731100384FF1 /* Package */,
 				975193872CF272A300384FF1 /* Freight */,
-				975193A12CF277F700384FF1 /* BaseListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -615,6 +615,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -649,6 +650,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

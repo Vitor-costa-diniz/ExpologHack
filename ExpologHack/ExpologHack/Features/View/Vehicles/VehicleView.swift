@@ -49,8 +49,6 @@ struct VehicleView: View {
                 }
             }
             
-            .padding(.horizontal)
-            
             Spacer()
             
             Button(action: {}, label: {

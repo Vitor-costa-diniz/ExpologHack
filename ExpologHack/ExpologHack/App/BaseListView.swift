@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BaseListView: View {
-    @State private var selectedIndex = 0
+    @State private var selectedIndex = 1
     @ObservedObject var packageViewModel: PackageViewModel
     @ObservedObject var freightViewModel: FreightViewModel
     @ObservedObject var vehicleViewModel: VehicleViewModel
@@ -17,32 +17,34 @@ struct BaseListView: View {
         self.packageViewModel = packageViewModel
         self.freightViewModel = freightViewModel
         self.vehicleViewModel = vehicleViewModel
-        UITabBar.appearance().barTintColor = .systemBackground
+        UITabBar.appearance().barTintColor = UIColor(.neutral500)
     }
     
     var body: some View {
         TabView(selection: $selectedIndex) {
             FreightListView(freightViewModel: freightViewModel, packageViewModel: packageViewModel)
-                .onAppear {
-                    freightViewModel.fetch()
-                }
                 .tag(0)
                 .tabItem {
                     Label(
-                        title: { Text("Home") },
-                        icon: { Image(systemName: "star.fill") }
+                        title: { Text("Fretes") },
+                        icon: { Image(.packageBox) }
                     )
                 }
-            
             
             VehicleView(viewModel: vehicleViewModel)
                 .tag(1)
                 .tabItem {
                     Label(
-                        title: { Text("Home") },
-                        icon: { Image(systemName: "star.fill") }
+                        title: { Text("Veículo") },
+                        icon: { Image(.truck) }
                     )
                 }
         }
+        .tint(Color.primary300)
     }
 }
+
+#Preview {
+    BaseListView(packageViewModel: .init(), freightViewModel: .init(), vehicleViewModel: .init())
+}
+
