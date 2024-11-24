@@ -22,7 +22,9 @@ struct BaseListView: View {
     
     var body: some View {
         TabView(selection: $selectedIndex) {
-            FreightListView(freightViewModel: freightViewModel, packageViewModel: packageViewModel)
+            FreightListView(hasVehicle: !vehicleViewModel.vehicles.isEmpty,
+                            freightViewModel: freightViewModel,
+                            packageViewModel: packageViewModel)
                 .tag(0)
                 .tabItem {
                     Label(

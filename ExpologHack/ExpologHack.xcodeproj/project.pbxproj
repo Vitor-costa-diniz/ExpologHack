@@ -44,7 +44,6 @@
 		975193AB2CF27C0500384FF1 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193AA2CF27C0500384FF1 /* InputField.swift */; };
 		975193B72CF27FF900384FF1 /* PackagesInFreightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193B62CF27FF900384FF1 /* PackagesInFreightView.swift */; };
 		975193B92CF284A900384FF1 /* NewFreightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193B82CF284A900384FF1 /* NewFreightView.swift */; };
-		975193BF2CF29C6300384FF1 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 975193BE2CF29C6300384FF1 /* OpenAI */; };
 		975193D82CF2BE2C00384FF1 /* BusinessData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 975193D62CF2BE2C00384FF1 /* BusinessData.xcdatamodeld */; };
 		975193DD2CF2BFB000384FF1 /* Freight+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193D92CF2BFB000384FF1 /* Freight+CoreDataClass.swift */; };
 		975193DE2CF2BFB000384FF1 /* Freight+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975193DA2CF2BFB000384FF1 /* Freight+CoreDataProperties.swift */; };
@@ -123,7 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				975193BF2CF29C6300384FF1 /* OpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,14 +894,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		975193BE2CF29C6300384FF1 /* OpenAI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 975193BD2CF29C6300384FF1 /* XCRemoteSwiftPackageReference "OpenAI" */;
-			productName = OpenAI;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		975193D62CF2BE2C00384FF1 /* BusinessData.xcdatamodeld */ = {
