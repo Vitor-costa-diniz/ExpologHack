@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct ExpologHackApp: App {
     var body: some Scene {
+        let persistenceContainer = PersistenceController.shared
         WindowGroup {
-            ContentView()
+            BaseListView(packageViewModel: PackageViewModel(), freightViewModel: FreightViewModel())
+                .environment(\.managedObjectContext, persistenceContainer.container.viewContext)
         }
     }
 }
