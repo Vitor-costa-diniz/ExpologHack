@@ -20,7 +20,20 @@ struct FreightListView: View {
             
             VStack {
                 if hasVehicle {
+                    emptyRoutes
+                        .padding(.bottom, 32)
                     
+                    Button(action: {}) {
+                        Text("Criar entrega")
+                            .font(.custom(TokenFont.semibold.rawValue, size: 14))
+                            .foregroundStyle(.white)
+                            .frame(height: 48)
+                            .frame(maxWidth: 345)
+                            .background {
+                                Color.primary500
+                                    .clipShape(.rect(cornerRadius: 8))
+                            }
+                    }
                 } else {
                     emptyState
                 }
@@ -28,22 +41,39 @@ struct FreightListView: View {
         }
     }
     
-    private var emptyState: some View {
+    private var emptyRoutes: some View {
         VStack(spacing: 8) {
-            Image(.noVehicle)
+            Image(.miniMap)
                 .padding(.bottom, 8)
             
-            Text("Cadastre um veículo antes.")
+            Text("Faça sua primeira entrega conosco!")
                 .font(.custom(TokenFont.semibold.rawValue, size: 20))
                 .foregroundStyle(.white)
             
-            Text("Antes de iniciar uma entrega, é preciso cadastrar seu veículo na plataforma.")
+            Text("Suas entregas realizadas serão exibidas nessa seção, faça sua primeira viagem conosco.")
                 .font(.custom(TokenFont.medium.rawValue, size: 16))
                 .foregroundStyle(.white)
                 .multilineTextAlignment(.center)
         }
         .padding(.horizontal, 24)
     }
+}
+
+private var emptyState: some View {
+    VStack(spacing: 8) {
+        Image(.noVehicle)
+            .padding(.bottom, 8)
+        
+        Text("Cadastre um veículo antes.")
+            .font(.custom(TokenFont.semibold.rawValue, size: 20))
+            .foregroundStyle(.white)
+        
+        Text("Antes de iniciar uma entrega, é preciso cadastrar seu veículo na plataforma.")
+            .font(.custom(TokenFont.medium.rawValue, size: 16))
+            .foregroundStyle(.white)
+            .multilineTextAlignment(.center)
+    }
+    .padding(.horizontal, 24)
 }
 
 #Preview {

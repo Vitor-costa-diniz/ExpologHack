@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BaseListView: View {
-    @State private var selectedIndex = 1
+    @State private var selectedIndex = 0
     @ObservedObject var packageViewModel: PackageViewModel
     @ObservedObject var freightViewModel: FreightViewModel
     @ObservedObject var vehicleViewModel: VehicleViewModel
