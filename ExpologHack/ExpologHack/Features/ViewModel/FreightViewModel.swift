@@ -15,6 +15,10 @@ class FreightViewModel: ObservableObject {
     let viewContext = PersistenceController.shared.container.viewContext
     
     @Published var freight: [Freight] = []
+    
+    init() {
+        self.fetch()
+    }
 
     func fetch() {
         let fetchRequest: NSFetchRequest<Freight> = Freight.fetchRequest()
