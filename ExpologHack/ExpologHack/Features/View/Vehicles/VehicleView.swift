@@ -11,54 +11,33 @@ struct VehicleView: View {
     @ObservedObject var viewModel: VehicleViewModel
     
     var body: some View {
-        VStack {
-            HStack {
-                Text("Veículo")
-                Spacer()
-                if viewModel.vehicles.isEmpty {
-                    Button(action: { viewModel.createVehicle(vehicle: ["Palhio"])}, label: {
-                        Image(systemName: "plus")
-                    })
+        ZStack {
+            Color.neutral600
+                .ignoresSafeArea()
+            
+            VStack(spacing: 8) {
+                Image(.personTruck)
+                    .padding(.bottom, 8)
+                
+                Text("Nenhum veículo cadastrado!")
+                
+                Text("Parece que você ainda não possui nenhum veículo cadastrado, cadastre seu veículo para realizar viagens.")
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 32)
+                
+                Button(action: {}) {
+                    Text("Cadastrar veículo")
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: 345)
+                        .frame(height: 48)
+                        .background {
+                            Color.primary500
+                                .clipShape(.rect(cornerRadius: 16))
+                        }
                 }
             }
-            .padding(.horizontal, 16)
+            .padding(.horizontal, 24)
             
-            VStack {
-                if !$viewModel.vehicles.isEmpty {
-                    List {
-                        ForEach(viewModel.vehicles) { item in
-                            Section {
-                                Text(item.name!)
-                                Text(item.loadCapacity!)
-                                Text(item.plate!)
-                                Text(item.type!)
-                            }
-                        }
-                    }
-                } else {
-                    HStack {
-                        VStack(alignment: .center) {
-                            Spacer()
-                            Text("Adicione um novo Frete clicando em +")
-                                .fontWeight(.regular)
-                                .font(.system(size: 15))
-                            Spacer()
-                        }
-                    }
-                    
-                }
-            }
-            
-            Spacer()
-            
-            Button(action: {}, label: {
-                Text("Novo frete")
-                    .foregroundStyle(.white)
-                    .padding()
-                    .background {
-                        Color.red
-                    }
-            })
         }
     }
 }
