@@ -12,6 +12,7 @@ struct FreightListView: View {
     let hasVehicle: Bool
     @ObservedObject var freightViewModel: FreightViewModel
     @ObservedObject var packageViewModel: PackageViewModel
+    @State private var showCreateSheet: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -33,6 +34,9 @@ struct FreightListView: View {
                     }
                 }
             }
+            .sheet(isPresented: $showCreateSheet, content: {
+                CreateRouteSheet(viewModel: freightViewModel)
+            })
             .navigationTitle(freightViewModel.freight.isEmpty ? "" : "Minhas Viagens")
         }
     }
@@ -79,7 +83,9 @@ struct FreightListView: View {
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 32)
             
-            Button(action: {}) {
+            Button(action: {
+                showCreateSheet.toggle()
+            }) {
                 Text("Criar entrega")
                     .font(.custom(TokenFont.semibold.rawValue, size: 14))
                     .foregroundStyle(.white)
