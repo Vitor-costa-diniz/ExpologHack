@@ -24,6 +24,7 @@
 		4A64E10D2CF2EACD0089D604 /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E10C2CF2EACD0089D604 /* VehicleModel.swift */; };
 		4A64E10F2CF2F1800089D604 /* ActionListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E10E2CF2F17F0089D604 /* ActionListRow.swift */; };
 		4A835EE52CF350F600FBFE5C /* ShowResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A835EE42CF350F600FBFE5C /* ShowResult.swift */; };
+		4A835EE82CF35A4100FBFE5C /* FreightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A835EE72CF35A4100FBFE5C /* FreightModel.swift */; };
 		4AAF26CC2CF2FBCF00101F30 /* NameSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF26CB2CF2FBCF00101F30 /* NameSheet.swift */; };
 		4AAF26CE2CF2FDD000101F30 /* AddLoadCapacitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF26CD2CF2FDD000101F30 /* AddLoadCapacitySheet.swift */; };
 		4AAF26D02CF3018B00101F30 /* SpecsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF26CF2CF3018B00101F30 /* SpecsSheet.swift */; };
@@ -90,6 +91,7 @@
 		4A64E10C2CF2EACD0089D604 /* VehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
 		4A64E10E2CF2F17F0089D604 /* ActionListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionListRow.swift; sourceTree = "<group>"; };
 		4A835EE42CF350F600FBFE5C /* ShowResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowResult.swift; sourceTree = "<group>"; };
+		4A835EE72CF35A4100FBFE5C /* FreightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreightModel.swift; sourceTree = "<group>"; };
 		4AAF26CB2CF2FBCF00101F30 /* NameSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSheet.swift; sourceTree = "<group>"; };
 		4AAF26CD2CF2FDD000101F30 /* AddLoadCapacitySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoadCapacitySheet.swift; sourceTree = "<group>"; };
 		4AAF26CF2CF3018B00101F30 /* SpecsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecsSheet.swift; sourceTree = "<group>"; };
@@ -209,6 +211,14 @@
 			path = Vehicle;
 			sourceTree = "<group>";
 		};
+		4A835EE62CF35A3100FBFE5C /* Freight */ = {
+			isa = PBXGroup;
+			children = (
+				4A835EE72CF35A4100FBFE5C /* FreightModel.swift */,
+			);
+			path = Freight;
+			sourceTree = "<group>";
+		};
 		4AF8F4E42CF1F3B5000549B9 = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +311,7 @@
 		4AF8F51F2CF1F448000549B9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4A835EE62CF35A3100FBFE5C /* Freight */,
 				4A64E10B2CF2EAB50089D604 /* Vehicle */,
 				975193862CF2726E00384FF1 /* BasicModel */,
 			);
@@ -528,6 +539,7 @@
 				4A26AF662CF2D2D500940C4D /* VehicleView.swift in Sources */,
 				975193982CF273F700384FF1 /* Persistence.swift in Sources */,
 				4A64E1072CF2E6640089D604 /* VehicleSheet.swift in Sources */,
+				4A835EE82CF35A4100FBFE5C /* FreightModel.swift in Sources */,
 				975193A52CF2798000384FF1 /* DescriptionItem.swift in Sources */,
 				4AF8F4F12CF1F3B5000549B9 /* ExpologHackApp.swift in Sources */,
 				975193942CF273A700384FF1 /* PackageViewModel.swift in Sources */,
