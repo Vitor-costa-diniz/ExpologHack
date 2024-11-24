@@ -23,26 +23,7 @@ struct AddVehicleSheet: View {
                 
                 VStack {
                     formVehicle
-                        .onChange(of: vehiclePlate) { value in
-                            if vehiclePlate.count > 6 {
-                                vehiclePlate.removeLast()
-                            }
-                        }
-                        .onChange(of: height) { value in
-                            if height.count > 6 {
-                                height.removeLast()
-                            }
-                        }
-                        .onChange(of: length) { value in
-                            if length.count > 6 {
-                                length.removeLast()
-                            }
-                        }
-                        .onChange(of: width) { value in
-                            if width.count > 6 {
-                                width.removeLast()
-                            }
-                        }
+                    
                         .toolbar {
                             ToolbarItem(placement: ToolbarItemPlacement.navigationBarLeading) {
                                 Button("Cancelar") {
@@ -60,7 +41,7 @@ struct AddVehicleSheet: View {
                                 .foregroundStyle(Color.neutral400)
                             }
                         }
-                        .toolbarBackground(Color.neutral500)
+                        .toolbarBackground(Color.neutral700)
                         .toolbarBackground(.visible, for: .navigationBar)
                         .navigationBarTitle("Adicionar veículo", displayMode: .inline)
                     
@@ -90,16 +71,19 @@ struct AddVehicleSheet: View {
                                 .foregroundStyle(Color.secondary)
                             Text(VehicleType.car.rawValue).tag(VehicleType.car)
                         }
+                        
                     case .plate:
                         TextField(text: $vehiclePlate) {
                             Text("000000")
                                 .foregroundStyle(Color.secondary)
                         }
                         .frame(width: 60)
+                        
                     case .loadCapacity:
                         Text("Inserir")
                         Image(.arrowRightBold)
                             .padding(.top, 2.4)
+                        
                     case .height:
                         TextField(text: $height) {
                             Text("0")
@@ -148,7 +132,26 @@ struct AddVehicleSheet: View {
         .scrollDisabled(true)
         .listStyle(DefaultListStyle())
         .scrollContentBackground(.hidden)
-        
+        .onChange(of: vehiclePlate) { value in
+            if vehiclePlate.count > 6 {
+                vehiclePlate.removeLast()
+            }
+        }
+        .onChange(of: height) { value in
+            if height.count > 6 {
+                height.removeLast()
+            }
+        }
+        .onChange(of: length) { value in
+            if length.count > 6 {
+                length.removeLast()
+            }
+        }
+        .onChange(of: width) { value in
+            if width.count > 6 {
+                width.removeLast()
+            }
+        }
     }
 }
 

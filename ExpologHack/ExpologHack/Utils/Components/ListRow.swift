@@ -25,7 +25,7 @@ struct ListRow<Content: View>: View {
             content
         }
         .contentShape(Rectangle())
-        .listRowBackground(Color.neutralN400)
+        .listRowBackground(Color.neutral800)
     }
 }
 
