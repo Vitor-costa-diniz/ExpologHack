@@ -14,31 +14,49 @@ struct FreightListView: View {
     @ObservedObject var packageViewModel: PackageViewModel
     
     var body: some View {
-        ZStack {
-            Color.neutral600
-                .ignoresSafeArea()
-            
-            VStack {
-                if hasVehicle {
-                    emptyRoutes
-                        .padding(.bottom, 32)
-                    
-                    Button(action: {}) {
-                        Text("Criar entrega")
-                            .font(.custom(TokenFont.semibold.rawValue, size: 14))
-                            .foregroundStyle(.white)
-                            .frame(height: 48)
-                            .frame(maxWidth: 345)
-                            .background {
-                                Color.primary500
-                                    .clipShape(.rect(cornerRadius: 8))
-                            }
+        NavigationStack {
+            ZStack {
+                Color.neutral600
+                    .ignoresSafeArea()
+                
+                VStack {
+                    if hasVehicle {
+                        
+                        if freightViewModel.freight.isEmpty {
+                            emptyRoutes
+                        } else {
+                            listRoutes
+                        }
+                        
+                    } else {
+                        emptyState
                     }
-                    
-                } else {
-                    emptyState
                 }
             }
+            .navigationTitle(freightViewModel.freight.isEmpty ? "" : "Minhas Viagens")
+        }
+    }
+    
+    private var listRoutes: some View {
+        VStack {
+            ForEach(freightViewModel.freight, id: \.self) {
+                Text($0.cost!)
+            }
+            
+            Spacer()
+            
+            Button(action: {}) {
+                Text("Criar entrega")
+                    .font(.custom(TokenFont.semibold.rawValue, size: 14))
+                    .foregroundStyle(.white)
+                    .frame(height: 48)
+                    .frame(maxWidth: 345)
+                    .background {
+                        Color.primary500
+                            .clipShape(.rect(cornerRadius: 8))
+                    }
+            }
+            .padding(.bottom, 24)
         }
     }
     
@@ -55,6 +73,19 @@ struct FreightListView: View {
                 .font(.custom(TokenFont.medium.rawValue, size: 16))
                 .foregroundStyle(.white)
                 .multilineTextAlignment(.center)
+                .padding(.bottom, 32)
+            
+            Button(action: {}) {
+                Text("Criar entrega")
+                    .font(.custom(TokenFont.semibold.rawValue, size: 14))
+                    .foregroundStyle(.white)
+                    .frame(height: 48)
+                    .frame(maxWidth: 345)
+                    .background {
+                        Color.primary500
+                            .clipShape(.rect(cornerRadius: 8))
+                    }
+            }
         }
         .padding(.horizontal, 24)
     }
