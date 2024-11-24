@@ -9,8 +9,17 @@
 /* Begin PBXBuildFile section */
 		4A26AF662CF2D2D500940C4D /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A26AF652CF2D2D500940C4D /* VehicleView.swift */; };
 		4A26AF682CF2D53200940C4D /* VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A26AF672CF2D53200940C4D /* VehicleViewModel.swift */; };
+		4A64E0FA2CF2E47F0089D604 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A64E0F12CF2E47E0089D604 /* Inter-Medium.ttf */; };
+		4A64E0FB2CF2E47F0089D604 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A64E0F22CF2E47E0089D604 /* Inter-SemiBold.ttf */; };
+		4A64E0FC2CF2E47F0089D604 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A64E0F32CF2E47E0089D604 /* Inter-ExtraLight.ttf */; };
+		4A64E0FD2CF2E47F0089D604 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A64E0F42CF2E47E0089D604 /* Inter-Light.ttf */; };
+		4A64E0FE2CF2E47F0089D604 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A64E0F52CF2E47E0089D604 /* Inter-Black.ttf */; };
+		4A64E0FF2CF2E47F0089D604 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A64E0F62CF2E47E0089D604 /* Inter-Regular.ttf */; };
+		4A64E1002CF2E47F0089D604 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A64E0F72CF2E47F0089D604 /* Inter-ExtraBold.ttf */; };
+		4A64E1012CF2E47F0089D604 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A64E0F82CF2E47F0089D604 /* Inter-Thin.ttf */; };
+		4A64E1022CF2E47F0089D604 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A64E0F92CF2E47F0089D604 /* Inter-Bold.ttf */; };
+		4A64E1052CF2E4E80089D604 /* TokenFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E1042CF2E4E80089D604 /* TokenFont.swift */; };
 		4AF8F4F12CF1F3B5000549B9 /* ExpologHackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F02CF1F3B5000549B9 /* ExpologHackApp.swift */; };
-		4AF8F4F32CF1F3B5000549B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F22CF1F3B5000549B9 /* ContentView.swift */; };
 		4AF8F4F52CF1F3B6000549B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F42CF1F3B6000549B9 /* Assets.xcassets */; };
 		4AF8F4F82CF1F3B6000549B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F72CF1F3B6000549B9 /* Preview Assets.xcassets */; };
 		4AF8F5022CF1F3B7000549B9 /* ExpologHackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F5012CF1F3B7000549B9 /* ExpologHackTests.swift */; };
@@ -58,9 +67,19 @@
 /* Begin PBXFileReference section */
 		4A26AF652CF2D2D500940C4D /* VehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
 		4A26AF672CF2D53200940C4D /* VehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewModel.swift; sourceTree = "<group>"; };
+		4A64E0EE2CF2E4140089D604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4A64E0F12CF2E47E0089D604 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		4A64E0F22CF2E47E0089D604 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		4A64E0F32CF2E47E0089D604 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4A64E0F42CF2E47E0089D604 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		4A64E0F52CF2E47E0089D604 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		4A64E0F62CF2E47E0089D604 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		4A64E0F72CF2E47F0089D604 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4A64E0F82CF2E47F0089D604 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		4A64E0F92CF2E47F0089D604 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		4A64E1042CF2E4E80089D604 /* TokenFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenFont.swift; sourceTree = "<group>"; };
 		4AF8F4ED2CF1F3B5000549B9 /* ExpologHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpologHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF8F4F02CF1F3B5000549B9 /* ExpologHackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpologHackApp.swift; sourceTree = "<group>"; };
-		4AF8F4F22CF1F3B5000549B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4AF8F4F42CF1F3B6000549B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AF8F4F72CF1F3B6000549B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4AF8F4FD2CF1F3B7000549B9 /* ExpologHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpologHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +142,38 @@
 			path = Vehicles;
 			sourceTree = "<group>";
 		};
+		4A64E0EF2CF2E4250089D604 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4A64E0F02CF2E4630089D604 /* Inter */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4A64E0F02CF2E4630089D604 /* Inter */ = {
+			isa = PBXGroup;
+			children = (
+				4A64E0F52CF2E47E0089D604 /* Inter-Black.ttf */,
+				4A64E0F92CF2E47F0089D604 /* Inter-Bold.ttf */,
+				4A64E0F72CF2E47F0089D604 /* Inter-ExtraBold.ttf */,
+				4A64E0F32CF2E47E0089D604 /* Inter-ExtraLight.ttf */,
+				4A64E0F42CF2E47E0089D604 /* Inter-Light.ttf */,
+				4A64E0F12CF2E47E0089D604 /* Inter-Medium.ttf */,
+				4A64E0F62CF2E47E0089D604 /* Inter-Regular.ttf */,
+				4A64E0F22CF2E47E0089D604 /* Inter-SemiBold.ttf */,
+				4A64E0F82CF2E47F0089D604 /* Inter-Thin.ttf */,
+			);
+			path = Inter;
+			sourceTree = "<group>";
+		};
+		4A64E1032CF2E4CC0089D604 /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				4A64E1042CF2E4E80089D604 /* TokenFont.swift */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
 		4AF8F4E42CF1F3B5000549B9 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +197,7 @@
 		4AF8F4EF2CF1F3B5000549B9 /* ExpologHack */ = {
 			isa = PBXGroup;
 			children = (
+				4A64E0EE2CF2E4140089D604 /* Info.plist */,
 				4AF8F51A2CF1F400000549B9 /* App */,
 				4AF8F51B2CF1F40F000549B9 /* Resources */,
 				4AF8F51C2CF1F436000549B9 /* Utils */,
@@ -195,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				4AF8F4F42CF1F3B6000549B9 /* Assets.xcassets */,
+				4A64E0EF2CF2E4250089D604 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -202,6 +255,7 @@
 		4AF8F51C2CF1F436000549B9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4A64E1032CF2E4CC0089D604 /* Tokens */,
 				4AF8F51D2CF1F441000549B9 /* Utils.swift */,
 				975193972CF273F700384FF1 /* Persistence.swift */,
 				975193A82CF27BBF00384FF1 /* HideKeyBoard.swift */,
@@ -223,7 +277,6 @@
 			children = (
 				975193912CF2737900384FF1 /* ViewModel */,
 				975193852CF2725800384FF1 /* View */,
-				4AF8F4F22CF1F3B5000549B9 /* ContentView.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -395,8 +448,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A64E0FB2CF2E47F0089D604 /* Inter-SemiBold.ttf in Resources */,
+				4A64E0FC2CF2E47F0089D604 /* Inter-ExtraLight.ttf in Resources */,
+				4A64E1022CF2E47F0089D604 /* Inter-Bold.ttf in Resources */,
+				4A64E1002CF2E47F0089D604 /* Inter-ExtraBold.ttf in Resources */,
 				4AF8F4F82CF1F3B6000549B9 /* Preview Assets.xcassets in Resources */,
 				4AF8F4F52CF1F3B6000549B9 /* Assets.xcassets in Resources */,
+				4A64E0FD2CF2E47F0089D604 /* Inter-Light.ttf in Resources */,
+				4A64E0FA2CF2E47F0089D604 /* Inter-Medium.ttf in Resources */,
+				4A64E0FF2CF2E47F0089D604 /* Inter-Regular.ttf in Resources */,
+				4A64E1012CF2E47F0089D604 /* Inter-Thin.ttf in Resources */,
+				4A64E0FE2CF2E47F0089D604 /* Inter-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +484,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				975193A92CF27BBF00384FF1 /* HideKeyBoard.swift in Sources */,
-				4AF8F4F32CF1F3B5000549B9 /* ContentView.swift in Sources */,
 				975193A22CF277F700384FF1 /* BaseListView.swift in Sources */,
 				4A26AF682CF2D53200940C4D /* VehicleViewModel.swift in Sources */,
 				4A26AF662CF2D2D500940C4D /* VehicleView.swift in Sources */,
@@ -437,6 +498,7 @@
 				975193B92CF284A900384FF1 /* NewFreightView.swift in Sources */,
 				975193AB2CF27C0500384FF1 /* InputField.swift in Sources */,
 				975193A72CF27B8700384FF1 /* SearchBar.swift in Sources */,
+				4A64E1052CF2E4E80089D604 /* TokenFont.swift in Sources */,
 				975193B72CF27FF900384FF1 /* PackagesInFreightView.swift in Sources */,
 				975193962CF273B300384FF1 /* FreightViewModel.swift in Sources */,
 				975193DD2CF2BFB000384FF1 /* Freight+CoreDataClass.swift in Sources */,
@@ -610,6 +672,7 @@
 				DEVELOPMENT_TEAM = ZAKSG2QLGT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpologHack/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -645,6 +708,7 @@
 				DEVELOPMENT_TEAM = ZAKSG2QLGT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpologHack/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

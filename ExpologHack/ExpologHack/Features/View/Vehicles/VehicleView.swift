@@ -20,19 +20,22 @@ struct VehicleView: View {
                     .padding(.bottom, 8)
                 
                 Text("Nenhum veículo cadastrado!")
+                    .font(.custom(TokenFont.semibold.rawValue, size: 20))
                 
                 Text("Parece que você ainda não possui nenhum veículo cadastrado, cadastre seu veículo para realizar viagens.")
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 32)
+                    .font(.custom(TokenFont.medium.rawValue, size: 16))
                 
                 Button(action: {}) {
                     Text("Cadastrar veículo")
+                        .font(.custom(TokenFont.semibold.rawValue, size: 14))
                         .foregroundStyle(.white)
-                        .frame(maxWidth: 345)
                         .frame(height: 48)
+                        .frame(maxWidth: 345)
                         .background {
                             Color.primary500
-                                .clipShape(.rect(cornerRadius: 16))
+                                .clipShape(.rect(cornerRadius: 8))
                         }
                 }
             }
