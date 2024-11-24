@@ -1,5 +1,5 @@
 //
-//  NameSheet.swift
+//  AddLoadCapacitySheet.swift
 //  ExpologHack
 //
 //  Created by Vitor Costa on 24/11/24.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct NameSheet: View {
+struct AddLoadCapacitySheet: View {
     @Binding var showSheet: Bool
-    @Binding var name: String?
-    @State private var nameMock: String = ""
+    @Binding var capacity: String?
+    @State private var capacityMock: String = ""
     
     var body: some View {
         NavigationStack {
@@ -23,7 +23,7 @@ struct NameSheet: View {
                         .frame(height: 50)
                         .foregroundStyle(.surfContainer)
                         .overlay {
-                            TextField("Nome do motorista", text: $nameMock)
+                            TextField("Capacidade de carga", text: $capacityMock)
                             .keyboardType(.alphabet)
                             .padding(.leading)
                         }
@@ -33,13 +33,13 @@ struct NameSheet: View {
                 }
             }
             .onAppear {
-                nameMock = name ?? ""
+                capacityMock = capacity ?? ""
             }
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancelar") {
                         showSheet.toggle()
-                        nameMock = ""
+                        capacityMock = ""
                     }
                     .font(.custom(TokenFont.regular.rawValue, size: 16))
                     .foregroundStyle(Color.primary200)
@@ -48,20 +48,20 @@ struct NameSheet: View {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Concluido") {
                         showSheet = false
-                        name = nameMock
+                        capacity = capacityMock
                     }
                     .font(.custom(TokenFont.regular.rawValue, size: 16))
-                    .foregroundStyle(nameMock.isEmpty ? Color.neutral400 : Color.primary200)
-                    .disabled(nameMock.isEmpty)
+                    .foregroundStyle(capacityMock.isEmpty ? Color.neutral400 : Color.primary200)
+                    .disabled(capacityMock.isEmpty)
                 }
             }
             .toolbarBackground(Color.neutral700)
             .toolbarBackground(.visible, for: .navigationBar)
-            .navigationBarTitle("Nome", displayMode: .inline)
+            .navigationBarTitle("Capacidade", displayMode: .inline)
         }
     }
 }
 
 #Preview {
-    NameSheet(showSheet: .constant(true), name: .constant(""))
+    AddLoadCapacitySheet(showSheet: .constant(true), capacity: .constant(""))
 }

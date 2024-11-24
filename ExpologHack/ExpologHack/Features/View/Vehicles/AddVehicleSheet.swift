@@ -11,7 +11,9 @@ struct AddVehicleSheet: View {
     @EnvironmentObject private var viewModel: VehicleViewModel
     @Environment(\.dismiss) private var dismiss
     @State private var showNameSheet: Bool = false
+    @State private var showCapacitySheet: Bool = false
     @State private var temporaryName: String?
+    @State private var temporaryCapacity: String?
     
     var body: some View {
         NavigationStack {
@@ -23,6 +25,9 @@ struct AddVehicleSheet: View {
                     formVehicle
                         .sheet(isPresented: $showNameSheet, content: {
                             NameSheet(showSheet: $showNameSheet, name: $temporaryName)
+                        })
+                        .sheet(isPresented: $showCapacitySheet, content: {
+                            AddLoadCapacitySheet(showSheet: $showCapacitySheet, capacity: $temporaryCapacity)
                         })
                         .toolbar {
                             ToolbarItem(placement: ToolbarItemPlacement.navigationBarLeading) {
@@ -45,7 +50,14 @@ struct AddVehicleSheet: View {
                         .toolbarBackground(Color.neutral700)
                         .toolbarBackground(.visible, for: .navigationBar)
                         .navigationBarTitle("Adicionar veículo", displayMode: .inline)
-                    
+                        .onAppear {
+                            temporaryName = viewModel.name
+                            temporaryCapacity = viewModel.capacity
+                        }
+                        .onDisappear {
+                            temporaryName = nil
+                            temporaryCapacity = nil
+                        }
                 }
             }
         }
@@ -54,7 +66,7 @@ struct AddVehicleSheet: View {
     private var formVehicle: some View {
         List {
             ActionListRow(title: "Nome do motorista") {
-                Text("Inserir")
+                Text("\(temporaryName ?? "Inserir")")
                     .font(.custom(TokenFont.regular.rawValue, size: 16))
                     .foregroundStyle(Color.secondary)
                 Image(.arrowRightBold)
@@ -82,9 +94,14 @@ struct AddVehicleSheet: View {
                         .frame(width: 60)
                         
                     case .loadCapacity:
-                        Text("Inserir")
-                        Image(.arrowRightBold)
-                            .padding(.top, 2.4)
+                        HStack {
+                            Text("\(temporaryCapacity ?? "Inserir")")
+                            Image(.arrowRightBold)
+                                .padding(.top, 2.4)
+                        }
+                        .onTapGesture {
+                            showCapacitySheet.toggle()
+                        }
                         
                     case .height:
                         TextField(text: $viewModel.height) {
