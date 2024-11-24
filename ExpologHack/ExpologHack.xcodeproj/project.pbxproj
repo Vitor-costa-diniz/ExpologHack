@@ -26,6 +26,7 @@
 		4AAF26CC2CF2FBCF00101F30 /* NameSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF26CB2CF2FBCF00101F30 /* NameSheet.swift */; };
 		4AAF26CE2CF2FDD000101F30 /* AddLoadCapacitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF26CD2CF2FDD000101F30 /* AddLoadCapacitySheet.swift */; };
 		4AAF26D02CF3018B00101F30 /* SpecsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF26CF2CF3018B00101F30 /* SpecsSheet.swift */; };
+		4AAF26D22CF31D0600101F30 /* FinishRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF26D12CF31D0600101F30 /* FinishRouteView.swift */; };
 		4AF8F4F12CF1F3B5000549B9 /* ExpologHackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F02CF1F3B5000549B9 /* ExpologHackApp.swift */; };
 		4AF8F4F52CF1F3B6000549B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F42CF1F3B6000549B9 /* Assets.xcassets */; };
 		4AF8F4F82CF1F3B6000549B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF8F4F72CF1F3B6000549B9 /* Preview Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		4AAF26CB2CF2FBCF00101F30 /* NameSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSheet.swift; sourceTree = "<group>"; };
 		4AAF26CD2CF2FDD000101F30 /* AddLoadCapacitySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoadCapacitySheet.swift; sourceTree = "<group>"; };
 		4AAF26CF2CF3018B00101F30 /* SpecsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecsSheet.swift; sourceTree = "<group>"; };
+		4AAF26D12CF31D0600101F30 /* FinishRouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRouteView.swift; sourceTree = "<group>"; };
 		4AF8F4ED2CF1F3B5000549B9 /* ExpologHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpologHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF8F4F02CF1F3B5000549B9 /* ExpologHackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpologHackApp.swift; sourceTree = "<group>"; };
 		4AF8F4F42CF1F3B6000549B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 				9751938A2CF272F800384FF1 /* FreightListView.swift */,
 				975193B62CF27FF900384FF1 /* PackagesInFreightView.swift */,
 				975193B82CF284A900384FF1 /* NewFreightView.swift */,
+				4AAF26D12CF31D0600101F30 /* FinishRouteView.swift */,
 			);
 			path = Freight;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				4AAF26CE2CF2FDD000101F30 /* AddLoadCapacitySheet.swift in Sources */,
 				9751938E2CF2732300384FF1 /* PackageInfoView.swift in Sources */,
 				4A64E10F2CF2F1800089D604 /* ActionListRow.swift in Sources */,
+				4AAF26D22CF31D0600101F30 /* FinishRouteView.swift in Sources */,
 				975193B92CF284A900384FF1 /* NewFreightView.swift in Sources */,
 				975193AB2CF27C0500384FF1 /* InputField.swift in Sources */,
 				975193A72CF27B8700384FF1 /* SearchBar.swift in Sources */,

@@ -34,6 +34,7 @@ struct FreightListView: View {
                                     .clipShape(.rect(cornerRadius: 8))
                             }
                     }
+                    
                 } else {
                     emptyState
                 }
