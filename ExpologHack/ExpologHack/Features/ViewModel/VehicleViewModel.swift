@@ -54,6 +54,11 @@ class VehicleViewModel: ObservableObject {
         resetData()
     }
     
+    func arePropertiesValid() -> Bool {
+        let stringsToValidate = [vehiclePlate, height, length, width]
+        return stringsToValidate.allSatisfy { !$0.isEmpty }
+    }
+    
     private func resetData() {
         selectVehicleType = .truck
         vehiclePlate = ""

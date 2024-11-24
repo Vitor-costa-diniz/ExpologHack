@@ -12,6 +12,7 @@ struct AddVehicleSheet: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showNameSheet: Bool = false
     @State private var showCapacitySheet: Bool = false
+    @State private var showSpecsSheet: Bool = false
     @State private var temporaryName: String?
     @State private var temporaryCapacity: String?
     @State private var temporarySpecs: String?
@@ -30,6 +31,9 @@ struct AddVehicleSheet: View {
                         .sheet(isPresented: $showCapacitySheet, content: {
                             AddLoadCapacitySheet(showSheet: $showCapacitySheet, capacity: $temporaryCapacity)
                         })
+                        .sheet(isPresented: $showSpecsSheet, content: {
+                            SpecsSheet(showSheet: $showSpecsSheet, specs: $temporarySpecs)
+                        })
                         .toolbar {
                             ToolbarItem(placement: ToolbarItemPlacement.navigationBarLeading) {
                                 Button("Cancelar") {
@@ -41,11 +45,18 @@ struct AddVehicleSheet: View {
                             
                             ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
                                 Button("Adicionar") {
-                                    viewModel.name = temporaryName
-                                    dismiss()
+                                    if viewModel.arePropertiesValid() && temporaryName != nil {
+                                        viewModel.name = temporaryName
+                                        viewModel.capacity = temporaryCapacity
+                                        viewModel.specs = temporarySpecs
+                                        viewModel.createVehicle()
+                                        dismiss()
+                                    }
                                 }
                                 .font(.custom(TokenFont.bold.rawValue, size: 16))
-                                .foregroundStyle(Color.neutral400)
+                                .foregroundStyle(viewModel.arePropertiesValid() && temporaryName != nil ?
+                                    Color.primary200 :
+                                    Color.neutral400)
                             }
                         }
                         .toolbarBackground(Color.neutral700)
@@ -122,7 +133,7 @@ struct AddVehicleSheet: View {
                                 .foregroundStyle(Color.secondary)
                         }
                         .keyboardType(.decimalPad)
-                        .frame(width: viewModel.length.count == 0 ? 9 : CGFloat(viewModel.length.count) * 9)
+                        .frame(width: viewModel.length.count == 0 ? 10 : CGFloat(viewModel.length.count) * 10)
                         .padding(.trailing, -5)
                         Text("m")
                         
@@ -148,7 +159,7 @@ struct AddVehicleSheet: View {
                 Image(.arrowRightBold)
                     .padding(.top, 2.4)
             } action: {
-                
+                showSpecsSheet.toggle()
             }
         }
         .scrollDisabled(true)
